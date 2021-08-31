@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Blog Inner</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/newsinner.css">
+    <link rel="shortcut icon" href="/css/images/favicon.svg"/>
+    <script src="/js/jquery-3.3.1.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/jquery.form-validator.js"></script>
+</head>
+<body>
+
+<%- include('includes/header.ejs') %>
+
+<div class="content">
+    <div class="news_container">
+        <div class="text_container">
+            <h1 class="page_title"><%= thisBlog.title %></h1>
+            <div class="news_date"><%= thisBlog.getDate %></div>
+        </div>
+        <div class="share_btns addthis_inline_share_toolbox_ohly"></div>
+        <div class="news_main_image">
+            <img src="/<%= thisBlog.image %>" alt="" title=""/>
+        </div>
+        <div class="text_container">
+            <div class="news_text">
+                <%- thisBlog.desc %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('includes/footer.ejs') %>
+
+<script src="/js/main.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ce500bf661de083"></script>
+</body>
+</html>

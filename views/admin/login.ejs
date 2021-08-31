@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Welcome Admin</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="shortcut icon" href="css/images/favicon.svg"/>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/jquery.form-validator.js"></script>
+</head>
+<body>
+
+<div class="header">
+    <div class="header_inner">
+        <a class="menu_button"><span></span></a>
+        <div class="header_bottom">
+            <div class="custom_container">
+                <div class="logo_block">
+                    <a href="/"><img src="css/images/logo.svg" alt="" title=""/></a>
+                </div>
+                <div class="menu_block">
+                    <div class="menu_inner">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <div class="custom_container">
+        <form action="" class="contact_form row">
+            <div class="section_title col-12">Admin</div>
+            <div class="field_block col-12">
+                <input type="text" placeholder="Name" name="name" autocomplete="off" data-validation="required"/>
+                <h2 class="name error"></h2>
+            </div>
+            <div class="field_block col-12">
+                <input type="password" name="password" placeholder="Password" autocomplete="off" data-validation="required"/>
+                <h2 class="password error"></h2>
+            </div>
+
+            <div class="button_block col-12">
+                <button type="submit" class="validate_button">LOGIN</button>
+            </div>
+            <div class="about_contacts col-12">
+
+            </div><br><br><br><br><br><br><br><br><br><br>
+        </form>
+
+        <script>
+            const form = document.querySelector('form');
+            const nameError = document.querySelector('.name.error');
+            const passwordError = document.querySelector('.password.error');
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                // reset errors
+                nameError.textContent = '';
+                passwordError.textContent = '';
+                // get values
+                const name = form.name.value;
+                const password = form.password.value;
+                try {
+                    const res = await fetch('/admin', {
+                        method: 'POST',
+                        body: JSON.stringify({ name, password }),
+                        headers: {'Content-Type': 'application/json'}
+                    });
+                    const data = await res.json();
+                    console.log(data);
+                    if (data.errors) {
+                        nameError.textContent = data.errors.name;
+                        passwordError.textContent = data.errors.password;
+                    }
+                    if (data.admin) {
+                        location.assign('/admin/blogs');
+                    }
+                }
+                catch (err) {
+                    console.log(err);
+                }
+            });
+        </script>
+    </div>
+    <div class="contacts_section" style="background-image: url('images/desarrollo-web.png')">
+        <div class="custom_container">
+            <div class="contacts_list">
+                <h2 class="list_title">Admin Page</h2>
+                <div class="list_inner">
+                    27720 Avenue Scott
+                    <br/>Unit# 140
+                    <br/>Valencia, CA 91355
+                    <br/>
+                    <br/><a href="tel:8188597667" class="phone_link">818-859-7667</a>
+                    <br/>
+                    <br/><a href="mailto:sales@loremusa.com">sales@loremusa.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../includes/footer.ejs') %>
+
+<script src="js/main.js"></script>
+</body>
+</html>

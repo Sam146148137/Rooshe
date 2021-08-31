@@ -1,0 +1,37 @@
+<div class="header">
+    <div class="header_inner">
+        <a class="menu_button"><span></span></a>
+        <div class="header_bottom">
+            <div class="custom_container">
+                <div class="logo_block">
+                    <a href="/"><img src="/css/images/logo.svg" alt="" title=""/></a>
+                </div>
+                <div class="menu_block">
+                    <div class="menu_inner">
+                        <ul class="main_menu">
+                            <li><a href="/<%=lang%>/blog"><%=staticData.nav_blog%></a></li>
+                            <li><a href="/<%=lang%>/community"><%=staticData.nav_community%></a></li>
+                            <li><a href="/<%=lang%>/about"><%=staticData.nav_about%></a></li>
+                            <li><select value="<%=lang%>" name="language" id="language" onclick="changeLanguage()" style="all: initial; color: aqua; background: black">
+                                    <%if(lang === 'en'){%>
+                                        <option value="hy">HY</option>
+                                        <option selected value="en">EN</option>
+                                    <%}else{%>
+                                        <option selected value="hy">HY</option>
+                                        <option  value="en">EN</option>
+                                    <%}%>
+                                </select></li>
+                        </ul>
+                    </div>
+                </div>
+<!--                <ul class="languages">-->
+<!--                    <li class="current_lg"><a href="" >ՀՅ</a></li>-->
+<!--                    <li><a href="">EN</a></li>-->
+<!--                </ul>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/script.js"></script>
+

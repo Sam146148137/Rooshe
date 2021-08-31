@@ -1,0 +1,335 @@
+.about_page .faq_list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none; }
+
+.about_page .page_title {
+  opacity: 0;
+  animation-name: showWithOpacity;
+  animation-duration: 1.8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-delay: 0.5s; }
+.about_page .page_description {
+  margin: 20px 51px 20px;
+  font-size: 180%;
+  line-height: 1.28em;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  opacity: 0;
+  color: #ffffff;
+  animation-name: showWithOpacity;
+  animation-duration: 1.8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-delay: 0.7s; }
+.about_page .team_block {
+  margin: 60px auto 0; }
+  .about_page .team_block ul {
+    list-style-type: none;
+    padding: 0; }
+    .about_page .team_block ul li {
+      margin-bottom: 25px; }
+  .about_page .team_block .team_inner {
+    display: flex; }
+  .about_page .team_block .info_team {
+    margin-left: 20px; }
+  .about_page .team_block .team_name {
+    font-size: 16px;
+    line-height: 1.33em;
+    text-transform: uppercase;
+    color: #1BC5D1;
+    margin-bottom: 15px; }
+  .about_page .team_block .team_description {
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; }
+  .about_page .team_block img {
+    max-width: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100%;
+    padding: 2px;
+    border: 2px solid #F47D6A; }
+.about_page .assortment_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0 30px;
+  opacity: 0;
+  animation-name: showWithOpacity;
+  animation-duration: 1.8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-delay: 0.9s; }
+  .about_page .assortment_section .image_block {
+    position: relative;
+    overflow: hidden;
+    width: 37%;
+    background-size: cover !important;
+    background-position: center !important;
+    border-radius: 5px; }
+    .about_page .assortment_section .image_block:before {
+      display: block;
+      content: "";
+      padding-bottom: 99.13%; }
+  .about_page .assortment_section .info_block {
+    position: relative;
+    width: 43%;
+    margin-left: -11.6%; }
+    .about_page .assortment_section .info_block:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: #f47d6a;
+      left: 10px;
+      top: 10px;
+      right: -10px;
+      bottom: -10px; }
+  .about_page .assortment_section .info_inner {
+    background: #ffffff;
+    padding: 40px;
+    position: relative;
+    z-index: 2; }
+  .about_page .assortment_section .info_description {
+    color: #666666;
+    font-size: 150%;
+    line-height: 1.5em;
+    padding-top: 52px;
+    position: relative; }
+    .about_page .assortment_section .info_description:before {
+      content: '';
+      width: 40px;
+      height: 2px;
+      background: #2bb0d3;
+      position: absolute;
+      top: 25px;
+      left: 0; }
+.about_page .faq_block {
+  opacity: 0;
+  animation-name: showWithOpacity;
+  animation-duration: 1.8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-delay: 0.9s;
+  margin-bottom: 35px; }
+.about_page .our_block {
+  text-align: center;
+  margin: 60px auto 0;
+  padding: 0; }
+  .about_page .our_block ul {
+    list-style-type: none;
+    padding: 0; }
+    .about_page .our_block ul li {
+      margin-bottom: 20px; }
+.about_page .our_title {
+  font-size: 18px;
+  line-height: 1.33em;
+  margin-bottom: 15px;
+  color: #1BC5D1; }
+.about_page .our_description {
+  font-size: 15px;
+  line-height: 24px;
+  margin-bottom: 15px;
+  color: #ffffff; }
+.about_page .faq_title {
+  font-size: 200%;
+  font-family: "montserrat_bold", "montserratarm_bold";
+  line-height: 27px;
+  text-align: center;
+  text-transform: uppercase; }
+.about_page .faq_list {
+  padding-top: 25px; }
+  .about_page .faq_list > li.opened {
+    background: #ffffff; }
+    .about_page .faq_list > li.opened .drop_btn {
+      color: #000000; }
+      .about_page .faq_list > li.opened .drop_btn span {
+        color: #000000; }
+      .about_page .faq_list > li.opened .drop_btn:before, .about_page .faq_list > li.opened .drop_btn:after {
+        color: #000000; }
+      .about_page .faq_list > li.opened .drop_btn:after {
+        height: 0;
+        margin-top: -1px; }
+      .about_page .faq_list > li.opened .drop_btn .icon_help:before,
+      .about_page .faq_list > li.opened .drop_btn span:before {
+        color: #F2F3F5; }
+  .about_page .faq_list .drop_btn {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    border-bottom: 1px solid #F2F3F5;
+    width: 100%;
+    text-align: left;
+    font-family: "montserrat_bold", "montserratarm_bold";
+    font-size: 160%;
+    line-height: 20px;
+    color: #333333; }
+    .about_page .faq_list .drop_btn:before {
+      display: block;
+      content: "";
+      position: absolute;
+      right: 17px;
+      top: 50%;
+      margin-top: 2px;
+      width: 15px;
+      border-top: 3px solid;
+      color: #ffffff; }
+    .about_page .faq_list .drop_btn:after {
+      display: block;
+      content: "";
+      position: absolute;
+      right: 23px;
+      top: 50%;
+      margin-top: -4px;
+      border-left: 3px solid;
+      height: 15px;
+      color: #ffffff; }
+    .about_page .faq_list .drop_btn .icon_help,
+    .about_page .faq_list .drop_btn span {
+      display: flex;
+      align-items: center;
+      padding: 24px 35px 21px 25px;
+      color: #ffffff; }
+      .about_page .faq_list .drop_btn .icon_help:before,
+      .about_page .faq_list .drop_btn span:before {
+        margin-right: 20px;
+        font-size: 125%; }
+  .about_page .faq_list .drop_block {
+    display: none; }
+  .about_page .faq_list .drop_inner {
+    color: #333333;
+    font-size: 130%;
+    line-height: 20px;
+    padding: 10px 25px 25px;
+    display: flex;
+    flex-direction: column; }
+    .about_page .faq_list .drop_inner span {
+      font-family: "montserrat_bold", "montserratarm_bold";
+      margin-top: 20px; }
+    .about_page .faq_list .drop_inner a {
+      color: #F47D6A;
+      font-size: 16px;
+      line-height: 1.33em;
+      margin-top: 10px;
+      -o-transition: color 0.3s;
+      -ms-transition: color 0.3s;
+      -moz-transition: color 0.3s;
+      -webkit-transition: color 0.3s;
+      transition: color 0.3s; }
+      .about_page .faq_list .drop_inner a:hover {
+        -o-transition: color 0.3s;
+        -ms-transition: color 0.3s;
+        -moz-transition: color 0.3s;
+        -webkit-transition: color 0.3s;
+        transition: color 0.3s;
+        color: #1BC5D1; }
+@media (max-width: 1199px) {
+  .about_page .assortment_section .image_block {
+    width: 47%; } }
+@media (max-width: 991px) {
+  .about_page .team_block {
+    margin: 30px auto 0; }
+  .about_page .our_block {
+    margin: 30px auto 0; }
+    .about_page .our_block ul li {
+      margin-bottom: 25px; }
+  .about_page .our_title {
+    margin-bottom: 3px; }
+  .about_page .assortment_section .info_block {
+    width: 50%;
+    margin-left: -18.6%; }
+  .about_page .assortment_section .image_block {
+    width: 75%; }
+  .about_page .assortment_section .info_inner {
+    padding: 20px; } }
+@media (max-width: 767px) {
+  .about_page .assortment_section .info_block {
+    width: 70%;
+    margin-left: -38.6%; }
+  .about_page .assortment_section .info_description {
+    padding-top: 40px;
+    font-size: 130%; }
+    .about_page .assortment_section .info_description:before {
+      top: 18px; }
+  .about_page .faq_list .drop_inner {
+    padding: 0 15px 25px 15px; }
+  .about_page .faq_list .drop_btn {
+    font-size: 140%; }
+    .about_page .faq_list .drop_btn:after {
+      right: 21px; }
+    .about_page .faq_list .drop_btn:before {
+      right: 15px; }
+    .about_page .faq_list .drop_btn .icon_help,
+    .about_page .faq_list .drop_btn span {
+      padding: 15px 37px 15px 15px; } }
+@media (max-width: 639px) {
+  .about_page .assortment_section {
+    flex-direction: column; }
+    .about_page .assortment_section .image_block {
+      width: 100%; }
+      .about_page .assortment_section .image_block:before {
+        padding-bottom: 60%; }
+    .about_page .assortment_section .info_block {
+      width: 100%;
+      margin: 15px 0 0;
+      padding: 0 10px 0 0; }
+      .about_page .assortment_section .info_block:after {
+        right: 0; } }
+@media (max-width: 479px) {
+  .about_page .assortment_section .info_inner {
+    padding: 10px; }
+  .about_page .team_block .team_inner {
+    flex-direction: column; }
+  .about_page .team_block ul li {
+    padding: 0; }
+  .about_page .team_block img {
+    margin: 0 auto 15px; } }
+
+.web .faq_list .drop_btn {
+  -o-transition: opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s; }
+  .web .faq_list .drop_btn:hover {
+    opacity: 0.5; }
+
+.touch .faq_list .drop_btn {
+  -o-transition: opacity 0.25s;
+  -ms-transition: opacity 0.25s;
+  -moz-transition: opacity 0.25s;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s; }
+  .touch .faq_list .drop_btn:active {
+    opacity: 0.5; }
+
+@keyframes showWithOpacity {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+.about_page .faq_list .drop_btn {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/*# sourceMappingURL=about.css.map */

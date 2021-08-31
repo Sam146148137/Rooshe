@@ -1,0 +1,281 @@
+.content {
+  padding-top: 0;
+  opacity: 0;
+  animation-name: showWithOpacity;
+  animation-duration: 1.8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-delay: 0.6s; }
+
+.custom_container > .row {
+  flex-direction: row-reverse;
+  justify-content: space-between; }
+
+.contact_form {
+  max-width: 560px;
+  padding-top: 35px; }
+  .contact_form .section_title {
+    margin-bottom: 25px;
+    color: #ffffff;
+    text-align: center; }
+
+.map_block {
+  position: relative;
+  overflow: hidden;
+  padding-right: 0;
+  min-height: 640px; }
+
+.contacts_list {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  bottom: 0;
+  background: #000000;
+  color: #ffffff;
+  z-index: 5;
+  text-align: center;
+  padding: 65px 20px;
+  width: 356px; }
+
+.list_title {
+  font-size: 260%;
+  line-height: 1.23em;
+  margin: 0;
+  font-family: "montserrat_bold", "montserratarm_bold"; }
+
+.list_inner {
+  margin-top: 20px;
+  font-size: 180%;
+  line-height: 1.28em; }
+  .list_inner a {
+    color: inherit;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+
+#map-canvas {
+  margin-right: -356px;
+  height: 100%; }
+
+.contact_info {
+  padding-top: 100px;
+  padding-bottom: 40px;
+  padding-left: 0; }
+  .contact_info .section_title {
+    text-align: center;
+    max-width: 460px;
+    padding-top: 25px; }
+
+.page_title {
+  max-width: 460px; }
+
+.about_contacts {
+  padding-top: 40px;
+  font-size: 180%;
+  line-height: 25px;
+  color: #ffffff; }
+  .about_contacts .block_title {
+    font-family: "montserrat_bold", "montserratarm_bold"; }
+  .about_contacts .block_description {
+    margin-top: 10px; }
+  .about_contacts .notif_block {
+    font-family: "montserrat_bold", "montserratarm_bold";
+    margin-top: 10px; }
+
+.page_head_block {
+  position: relative;
+  overflow: hidden;
+  position: relative; }
+  .page_head_block:before {
+    position: absolute;
+    background: #00000040;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%; }
+  .page_head_block img {
+    display: block;
+    width: 100%;
+    max-height: 60vh;
+    min-height: 280px;
+    object-fit: cover; }
+  .page_head_block .title_block {
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40px; }
+    @media (max-width: 1199px) {
+      .page_head_block .title_block {
+        bottom: 30px; } }
+    @media (max-width: 959px) {
+      .page_head_block .title_block {
+        bottom: 20px; } }
+    @media (max-width: 767px) {
+      .page_head_block .title_block {
+        bottom: 15px; } }
+  .page_head_block .page_title {
+    text-align: left;
+    max-width: 100%; }
+
+.contacts_section {
+  margin-top: 40px;
+  padding-bottom: 100px;
+  position: relative;
+  background-size: 0; }
+  .contacts_section:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 80px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    background-attachment: no-repeat; }
+  .contacts_section .contacts_list {
+    background: #000000;
+    color: #ffffff;
+    z-index: 5;
+    text-align: center;
+    padding: 65px 20px;
+    width: 356px;
+    position: relative;
+    z-index: 5; }
+  .contacts_section .list_title {
+    font-size: 260%;
+    line-height: 1.23em;
+    margin: 0;
+    font-family: "montserrat_bold", "montserratarm_bold"; }
+  .contacts_section .list_inner {
+    margin-top: 20px;
+    font-size: 180%;
+    line-height: 1.28em; }
+    .contacts_section .list_inner a {
+      color: inherit;
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      overflow: hidden;
+      max-width: 100%;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+
+@media (max-width: 1599px) {
+  .contacts_section .contacts_list,
+  .map_block .contacts_list {
+    width: 320px;
+    padding: 50px 20px; }
+  .contacts_section .list_title,
+  .map_block .list_title {
+    font-size: 240%; }
+  .contacts_section .list_inner,
+  .map_block .list_inner {
+    font-size: 160%; }
+
+  .about_contacts {
+    font-size: 160%;
+    line-height: 23px; } }
+@media (max-width: 1399px) {
+  .contacts_section .list_title,
+  .map_block .list_title {
+    font-size: 220%; } }
+@media (max-width: 1199px) {
+  .contact_info {
+    padding-top: 60px;
+    padding-left: 20px; }
+
+  .about_contacts {
+    font-size: 140%;
+    line-height: 20px;
+    padding-top: 30px; }
+
+  .contacts_section #map-canvas,
+  .map_block #map-canvas {
+    margin-right: -320px; }
+  .contacts_section .contacts_list,
+  .map_block .contacts_list {
+    width: 280px;
+    padding: 30px 20px; }
+  .contacts_section .list_title,
+  .map_block .list_title {
+    font-size: 220%; }
+  .contacts_section .list_inner,
+  .map_block .list_inner {
+    font-size: 140%; } }
+@media (max-width: 991px) {
+  .contacts_section #map-canvas,
+  .map_block #map-canvas {
+    margin-right: 0; }
+  .contacts_section .list_title,
+  .map_block .list_title {
+    font-size: 200%; }
+
+  .contact_info {
+    padding-top: 40px; } }
+@media (max-width: 767px) {
+  .contact_info {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px; }
+
+  .map_block {
+    min-height: 0;
+    padding-right: 10px; }
+    .map_block .contacts_list {
+      position: relative;
+      bottom: auto;
+      left: auto;
+      width: 100%; }
+    .map_block #map-canvas {
+      height: 320px; }
+
+  .contacts_section .contacts_list {
+    width: 100%; }
+
+  .page_head_block img {
+    max-height: 17vh;
+    min-height: 125px; } }
+.web .map_block .list_inner a:hover {
+  color: #999999;
+  text-decoration: underline; }
+
+.touch .map_block .list_inner a {
+  -o-transition: color 0.15s;
+  -ms-transition: color 0.15s;
+  -moz-transition: color 0.15s;
+  -webkit-transition: color 0.15s;
+  transition: color 0.15s; }
+  .touch .map_block .list_inner a:hover {
+    color: #999999;
+    text-decoration: underline; }
+
+@media screen and (min-width: 576px) {
+  .contact_form {
+    margin-left: auto;
+    margin-right: auto; } }
+@keyframes showWithOpacity {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+.web .map_block .list_inner a {
+  -o-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s; }
+
+/*# sourceMappingURL=contacts.css.map */

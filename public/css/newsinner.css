@@ -1,0 +1,88 @@
+.news_container .video_block > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.news_container .video_block > img {
+  object-fit: cover; }
+
+.news_container .video_block iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100% !important;
+  height: 100% !important; }
+
+.news_container .video_block {
+  position: relative;
+  overflow: hidden; }
+  .news_container .video_block:before {
+    display: block;
+    content: "";
+    padding-bottom: 56.25%; }
+
+.news_container {
+  max-width: 1195px;
+  padding: 0 15px;
+  margin: 0 auto;
+  opacity: 0;
+  animation-name: showWithOpacity;
+  animation-duration: 1.8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-delay: 0.5s; }
+  .news_container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px; }
+  .news_container .share_btns {
+    height: 32px;
+    margin-top: 10px; }
+  .news_container .text_container {
+    max-width: 865px;
+    margin: 0 auto; }
+  .news_container .video_block {
+    margin-top: 10px; }
+  .news_container .news_date {
+    font-size: 160%;
+    line-height: 23px;
+    text-align: center;
+    color: #999999;
+    margin-top: 10px;
+    font-family: "montserrat_bold", "montserratarm_bold"; }
+  .news_container .news_main_image {
+    margin-bottom: 40px; }
+  .news_container .news_text {
+    font-size: 180%;
+    line-height: 25px;
+    color: #ffffff; }
+    .news_container .news_text a {
+      margin-bottom: 10px;
+      color: #1BC5D1;
+      display: block; }
+  @media (max-width: 959px) {
+    .news_container .news_date {
+      font-size: 140%;
+      line-height: 20px; }
+    .news_container .news_text {
+      font-size: 160%;
+      line-height: 23px; }
+    .news_container .news_main_image {
+      margin-bottom: 30px; } }
+  @media (max-width: 767px) {
+    .news_container .news_text {
+      font-size: 140%; } }
+
+@keyframes showWithOpacity {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*# sourceMappingURL=newsinner.css.map */

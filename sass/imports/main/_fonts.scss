@@ -1,0 +1,137 @@
+@font-face {
+    font-family: "montserrat_regular";
+    font-display: swap;
+    src: url('../fonts/Montserrat-Regular/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Montserrat-Regular/Montserrat-Regular.otf') format('opentype'),
+    url('../fonts/Montserrat-Regular/Montserrat-Regular.woff') format('woff'),
+    url('../fonts/Montserrat-Regular/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserratarm_regular';
+    font-display: swap;
+    src: url('../fonts/Montserratarm-Regular/Montserratarm-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Montserratarm-Regular/Montserratarm-Regular.otf') format('opentype'),
+    url('../fonts/Montserratarm-Regular/Montserratarm-Regular.woff') format('woff'),
+    url('../fonts/Montserratarm-Regular/Montserratarm-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "montserrat_bold";
+    font-display: swap;
+    src: url('../fonts/Montserrat-Bold/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Montserrat-Bold/Montserrat-Bold.otf') format('opentype'),
+    url('../fonts/Montserrat-Bold/Montserrat-Bold.woff') format('woff'),
+    url('../fonts/Montserrat-Bold/Montserrat-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserratarm_bold';
+    font-display: swap;
+    src: url('../fonts/Montserratarm-Bold/Montserratarm-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Montserratarm-Bold/Montserratarm-Bold.otf') format('opentype'),
+    url('../fonts/Montserratarm-Bold/Montserratarm-Bold.woff') format('woff'),
+    url('../fonts/Montserratarm-Bold/Montserratarm-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'icon';
+    font-display: 'auto';
+    src: url('../fonts/icons/icomoon.eot?mxc793');
+    src: url('../fonts/icons/icomoon.eot?mxc793#iefix') format('embedded-opentype'),
+    url('../fonts/icons/icomoon.ttf?mxc793') format('truetype'),
+    url('../fonts/icons/icomoon.woff?mxc793') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class*="icon_"] {
+    @extend %iconElement;
+}
+
+.icon_house:before {
+    content: "\e90a";
+}
+
+.icon_foodie:before {
+    content: "\e90c";
+}
+
+.icon_eating:before {
+    content: "\e90a";
+    color: $siteColor1;
+}
+
+.icon_cooking:before {
+    content: "\e90c";
+    color: $btnColorOrange;
+}
+
+.icon_rarrow:before {
+    content: "\e90b";
+}
+
+.icon_close:before {
+    content: "\e900";
+}
+
+.icon_left:before {
+    content: "\e901";
+}
+
+.icon_right:before {
+    content: "\e902";
+}
+
+.icon_flickr:before {
+    content: "\e903";
+}
+
+.icon_youtube:before {
+    content: "\e904";
+}
+
+.icon_behance:before {
+    content: "\e905";
+}
+
+.icon_facebook:before {
+    content: "\e906";
+}
+
+.icon_instagram:before {
+    content: "\e907";
+}
+
+.icon_linkedin:before {
+    content: "\e908";
+}
+
+.icon_ok:before {
+    content: "\e909";
+}
+
+.icon_pinterest:before {
+    content: "\e910";
+}
+
+.icon_twitter:before {
+    content: "\e911";
+}
+
+.icon_vk:before {
+    content: "\e912";
+}
+
+.icon_down:before {
+    content: "\e914";
+}

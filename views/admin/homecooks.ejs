@@ -1,0 +1,45 @@
+<%- include('layout/head.ejs') %>
+<div class="container">
+    <div class="row my-4">
+        <div class="col-lg-12">
+            <div class="table-responsive">
+                <table class="table table-striped text-center my-3 ">
+                    <thead>
+                    <tr class="table-dark">
+                        <th>Id</th>
+                        <th>name</th>
+                        <th>surname</th>
+                        <th>email</th>
+                        <th>phone</th>
+                        <th>subject</th>
+                        <th>facebook</th>
+                        <th>instagram</th>
+                        <th>youtube</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% item.forEach (function (item, index ) { %>
+                        <tr class="align-middle">
+                            <td><%= index + 1 %></td>
+                            <td><%= item.name %></td>
+                            <td><%= item.surname %></td>
+                            <td><%= item.email %></td>
+                            <td><%= item.phone %></td>
+                            <td><%= item.subject %></td>
+                            <td><%= item.facebook %></td>
+                            <td><%= item.instagram %></td>
+                            <td><%= item.youtube %></td>
+                        </tr>
+                    <%})%>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('layout/foot.ejs') %>
+
+
+
+

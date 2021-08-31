@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Stream meal</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="shortcut icon" href="/css/images/favicon.svg"/>
+    <script src="/js/jquery-3.3.1.js"></script>
+    <script src="/js/bootstrap.js"></script>
+</head>
+<body>
+
+<%- include('includes/header.ejs') %>
+
+<div class="content">
+    <div class="main_screen">
+        <div class="main_top">
+            <a href="#" class="category_block nicotine_free">
+                <img src="/images/5fcf47cc0ff0404f51bc8630_3367077.jpg" alt="" title=""/>
+                <span class="info_block">
+					<span class="category_title icon_eating"><span class="title_inner"><%=staticData.home_food%></span></span>
+					<span class="category_description">Lorem ipsum dolor sit amet, consectetur</span>
+				</span>
+            </a>
+            <a href="#" class="category_block movie_prod">
+                <img src="/images/desarrollo-web.png" alt="" title=""/>
+                <span class="info_block">
+				    <span class="category_title icon_cooking"><span class="title_inner"><%=staticData.home_homecooks%></span></span>
+				    <span class="category_description">Lorem ipsum dolor sit amet, consectetur</span>
+				</span>
+            </a>
+        </div>
+    </div>
+    <div class="custom_container">
+        <div class="herbal_mixtures animation_block" style="background-image: url('images/web-apps-t.jpg')">
+            <div class="info_block">
+                <div class="info_inner">
+                    <h2 class="page_title"><%=staticData.home_better%></h2>
+                    <div class="description_block"><%=staticData.home_focus%>
+                    </div>
+                    <a href="/<%=lang%>/community" class="buy_now_btn"><%=staticData.home_join%></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="custom_container">
+        <div class="block_title">
+            <h1 class="page_title"><%=staticData.home_blog%></h1>
+            <a href="/<%=lang%>/blog"><%=staticData.home_view%></a>
+        </div>
+        <div class="small_banners">
+            <% var i = 0; %>
+            <% item.forEach (function (item) { %>
+            <div <%if (i===0) { %> class="banner_block animation_block left_animation"<% } %>
+            <%if (i===1) { %> class="banner_block animation_block bottom_animation"<% } %>
+            <%if (i===2) { %> class="banner_block animation_block right_animation"<% } %>
+            >
+                <div class="banner_inner"
+                     style="background-image: url('<%= item.image %>')">
+                    <h2 class="banner_title"><%= item.title %></h2>
+                    <a href="/<%=lang%>/blog/<%= item.url %>" class="banner_btn"><%=staticData.home_read%></a>
+                </div>
+            </div>
+            <%i ++%>
+            <%})%>
+        </div>
+    </div>
+
+</div>
+
+<%- include('includes/footer.ejs') %>
+
+<script src="js/main.js"></script>
+</body>
+</html>

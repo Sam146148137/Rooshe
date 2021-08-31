@@ -1,0 +1,48 @@
+<%- include('layout/head.ejs') %>
+<script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+<header>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 mx-auto mt-4">
+            <div class="card shadow">
+                <div class="card-header bg-success">
+                    <h3 class="text-light">Edit Blog - <%= content.title %></h3>
+                </div>
+                <div class="card-body p-4">
+                    <form action="/admin/update/<%= content._id %>" method="post" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="title">Title</label>
+                            <input type="text" name="title" id="tytle" class="form-control form-control-lg"
+                                   placeholder="input title" value="<%= content.title %>" required/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="url">Url</label>
+                            <input type="text" name="url" id="url" class="form-control form-control-lg"
+                                   placeholder="enter url" value="<%= content.url %>" required/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="desc">Description</label>
+                            <textarea name="desc" id="desc" class="form-control form-control-lg"
+                                      placeholder="Description" value="<%= content.desc %>" required><%= content.desc %></textarea>
+                            <script>
+                                CKEDITOR.replace( 'desc' );
+                            </script>
+                        </div>
+                        <div class="mb-3">
+                            <label for="image">Select Image</label>
+                            <input type="file" name="image" id="img" class="form-control form-control-lg"/>
+                            <img src="/<%= content.image %>" width="100" class="img-thumbnail mt-1">
+                        </div>
+                        <input type="hidden" name="old_image" value="<%= content.image %>">
+                        <div class="mb-3 d-grid">
+                            <input type="submit" name="submit" value="Update Blog" class="btn btn-success btn-lg"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('layout/foot.ejs') %>

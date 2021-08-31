@@ -1,0 +1,82 @@
+.footer {
+    opacity: 1;
+    @extend %opacity300;
+    margin: 0 auto;
+    .custom_container {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    &_bottom {
+        background: $black;
+        color: $white;
+        font-size: 120%;
+        line-height: 15px;
+        padding: 20px $containerPadding;
+        .copyrights {
+            max-width: 50%;
+            padding-right: 20px;
+            span {
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+        .developer {
+            max-width: 50%;
+            padding-left: 20px;
+            a {
+                display: inline-block;
+                vertical-align: top;
+                color: inherit;
+                font-family: $bold;
+            }
+        } 
+    }
+    @media #{$until1199} {
+        &_bottom {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+    @media #{$until959} {
+        &_bottom {
+            padding-left: $containerPadding *1.5;
+            padding-right: $containerPadding *1.5;
+        }
+    }
+
+    @media #{$until575} {
+        text-align: center;
+        .custom_container{
+            flex-direction: column-reverse;
+        }
+
+        &_bottom {
+            padding-top: 10px;
+        }
+        .copyrights,
+        .developer {
+            max-width: 100%;
+            padding: 5px 0 0;
+        }
+    }
+}
+
+.web {
+    .developer a {
+        @extend %color300;
+        &:hover {
+            color: rgba($white,0.7);
+        }
+    }
+}
+
+.touch {
+    .developer a {
+        @include animStyle(color 0.15s);
+        &:active {
+            color: rgba($white,0.7);
+        }
+    }
+}

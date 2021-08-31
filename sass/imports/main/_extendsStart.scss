@@ -1,0 +1,151 @@
+%standardList {
+    @include standardList();
+}
+
+%coverLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+%noBlink {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+
+%verticalRotate {
+    @include transStyle(scaleX(-1));
+}
+
+%horizontalRotate {
+    @include transStyle(scaleY(-1));
+}
+
+%centeredImage {
+    > img {
+        @extend %coverLayer;
+        object-fit: cover;
+    }
+}
+
+%coverVideo {
+    iframe {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+%square {
+    @include overHidden();
+    @extend %centeredImage;
+    @extend %coverVideo;
+
+    &:before {
+        display: block;
+        content: "";
+        padding-bottom: 100%;
+    }
+}
+
+%almostSquare {
+    @include overHidden();
+    @extend %centeredImage;
+    @extend %coverVideo;
+
+    &:before {
+        display: block;
+        content: "";
+        padding-bottom: 75%;
+    }
+}
+
+%lessWide {
+    @include overHidden();
+    @extend %centeredImage;
+    @extend %coverVideo;
+
+    &:before {
+        display: block;
+        content: "";
+        padding-bottom: 62.5%;
+    }
+}
+
+%standardWide {
+    @include overHidden();
+    @extend %centeredImage;
+    @extend %coverVideo;
+
+    &:before {
+        display: block;
+        content: "";
+        padding-bottom: 56.25%;
+    }
+}
+
+%halfWide {
+    @include overHidden();
+    @extend %centeredImage;
+    @extend %coverVideo;
+
+    &:before {
+        display: block;
+        content: "";
+        padding-bottom: 50%;
+    }
+}
+
+%superWide {
+    @include overHidden();
+    @extend %centeredImage;
+    @extend %coverVideo;
+
+    &:before {
+        display: block;
+        content: "";
+        padding-bottom: 25%;
+    }
+}
+
+%standardNarrow {
+    @include overHidden();
+    @extend %centeredImage;
+
+    &:before {
+        display: block;
+        content: "";
+        padding-bottom: 177.78%;
+    }
+}
+
+%lessNarrow {
+    @include overHidden();
+    @extend %centeredImage;
+
+    &:before {
+        display: block;
+        content: "";
+        padding-bottom: 133.33%;
+    }
+}
+
+%iconElement {
+    &:before,
+    &:after {
+        font-family: 'icon' !important;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1em;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}

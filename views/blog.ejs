@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>BLOG</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/newslist.css">
+    <link rel="shortcut icon" href="/css/images/favicon.svg"/>
+    <script src="/js/jquery-3.3.1.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/jquery.form-validator.js"></script>
+</head>
+<body>
+
+<%- include('includes/header.ejs') %>
+
+<div class="content">
+    <div class="custom_container">
+        <h1 class="page_title"><%=staticData.blog_blog%></h1>
+        <div class="page_description"><%=staticData.blog_marketing%></div>
+        <div class="news_list">
+            <ul>
+                <% for (var i = 0; i < blogs.length; i++) { %>
+
+                <li class="col-12 col-sm-6 col-lg-4">
+                    <div class="news_block combo_hover">
+                        <a href="/<%=lang%>/blog/<%= blogs[i].url %>" class="news_image combo_link">
+                            <img src="/<%= blogs[i].image %>" alt="" title=""/>
+                        </a>
+                        <div class="news_date"><%= blogs[i].getDate %></div>
+                        <a href="/<%=lang%>/blog/<%= blogs[i].url %>" class="news_title combo_link"><%= blogs[i].title %></a>
+                        <div class="news_description"><%- blogs[i].desc %></div>
+                        <a href="/<%=lang%>/blog/<%= blogs[i].url %>" class="read_all combo_link"><%=staticData.blog_read%></a>
+                    </div>
+                </li>
+                    <% } %>
+            </ul>
+        </div>
+        <div class="paging" style="background: #171717">
+            <% if (pages > 0) { %>
+                <ul id="paginationUl" class="pagination text-center">
+                    <% if (current == 1) { %>
+                    <li class="disabled"><a class="current_page"><%=staticData.blog_first%></a></li>
+                    <% } else { %>
+                    <li><a href="/<%=lang%>/blog?page=1"><%=staticData.blog_first%></a></li>
+                    <% } %>
+                    <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+                    <% if (i !== 1) { %>
+                        <li class="disabled"><a>...</a></li>
+                    <% } %>
+                    <% for (; i <= (Number(current) + 4) && i <= pages; i++) { %>
+                        <% if (i == current) { %>
+                            <li class="active"><a><%= i %></a></li>
+                        <% } else { %>
+                        <li><a href="/<%=lang%>/blog?page=<%= i %>"><%= i %></a></li>
+                        <% } %>
+                        <% if (i == Number(current) + 4 && i < pages) { %>
+                            <li class="disabled"><a>...</a></li>
+                        <% } %>
+                    <% } %>
+                    <% if (current == pages) { %>
+                        <li class="disabled"><a></a></li>
+                    <% } else { %>
+                    <li><a href="/<%=lang%>/blog?page=<%= pages %>"><%=staticData.blog_last%></a></li>
+                    <% } %>
+                </ul>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<%- include('includes/footer.ejs') %>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
