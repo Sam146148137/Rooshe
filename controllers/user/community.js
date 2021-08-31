@@ -32,7 +32,7 @@ exports.postAddCommunity = (req, res) => {
         ...value
     })
     function myFunction() {
-        setTimeout(function(){ res.redirect('/'); }, 2000);
+        setTimeout(function(){ return res.redirect('/'); }, 2000);
     }
     myFunction()
 
