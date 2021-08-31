@@ -17,13 +17,7 @@
     <script src="/js/jquery.form-validator.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-<style>
-    #p1, #p2, #p3, #p4, #p5{
-        color: #ff0000;
-        font-size: 13px;
-        font-weight: 600;
-    }
-</style>
+
 <body>
 
 <%- include('includes/header.ejs') %>
@@ -33,63 +27,56 @@
         <img src="/images/5fcf47cc0ff0404f51bc8630_3367077.jpg" alt="" title=""/>
     </div>
     <div class="custom_container">
-        <form action="/community" class="contact_form row" method="post" class="contact_form row" id="c_form">
+        <form action="/community" method="post" class="contact_form row" id="c_form">
             <div class="section_title col-12"><%=staticData.community_join%></div>
             <div class="field_block col-12 col-sm-6">
-                <input type="text" id="surname" name="surname" autocomplete="off" placeholder="<%=staticData.community_surname%>" data-validation="required"/>
-                <div class="section_title col-12"><%=staticData.community_mandatory_surname%></div>
+                <input type="text" autocomplete="off" placeholder="<%=staticData.community_surname%>" name="surname" data-validation="required"/>
+                <span class="error_hint"><%=staticData.community_mandatory_surname%></span>
             </div>
             <div class="field_block col-12 col-sm-6">
-                <input type="text" id="name" name="name" autocomplete="off" placeholder="<%=staticData.community_name%>"data-validation="required"/>
-                <div class="section_title col-12"><%=staticData.community_mandatory_name%></div>
+                <input type="text" autocomplete="off" placeholder="<%=staticData.community_name%>" name="name" id="name" data-validation="required"/>
+                <span class="error_hint"><%=staticData.community_mandatory_name%></span>
             </div>
             <div class="field_block col-12">
-                <input type="email" id="email" name="email" autocomplete="off" placeholder="<%=staticData.community_email%>" data-validation="email"/>
-                <div class="section_title col-12"><%=staticData.community_mandatory_email%></div>
+                <input type="text" autocomplete="off" placeholder="<%=staticData.community_email%>" name="address" data-validation="required"/>
+                <span class="error_hint"><%=staticData.community_mandatory_email%></span>
             </div>
             <div class="field_block col-12">
-                <input type="text" id="phone" name="phone" autocomplete="off" placeholder="<%=staticData.community_phone%>" oninput="this.value=this.value.replace(/[^0-9+]/g,'');" data-validation="required"/>
-                <div class="section_title col-12"><%=staticData.community_mandatory_phone%></div>
+                <input type="text" name="phone" autocomplete="off" placeholder="<%=staticData.community_phone%>" oninput="this.value=this.value.replace(/[^0-9+]/g,'');" data-validation="required"/>
+							<span class="individual_hint"><%=staticData.community_mandatory_phone%></span>
             </div>
             <div class="field_block col-12">
-                <select id="subject" name="subject" title="<%=staticData.community_level%>" class="selectpicker" data-validation="required">
+                <select name="desc" data-validation="required"  title="Cooking level" class="selectpicker">
                     <option value="Beginner"><%=staticData.community_subject1%></option>
-                    <option value="Experienced home cook"><%=staticData.community_subject2%></option>
-                    <option value="certified cook"><%=staticData.community_subject3%></option>
+                    <option value="Experienced"><%=staticData.community_subject2%></option>
+                    <option value="Certified cook"><%=staticData.community_subject3%></option>
                 </select>
-                <p id="p5"></p>
-            </div>
-            <div class="section_title col-12"><%=staticData.community_busines%></div>
-            <div class="field_block col-12">
-                <input type="text" placeholder="<%=staticData.community_facebook%>" name="facebook" autocomplete="off" data-validation="facebook"/>
-
+                <span class="error_hint"><%=staticData.community_mandatory_subject%></span>
             </div>
             <div class="field_block col-12">
-                <input type="text" placeholder="<%=staticData.community_instagram%>" name="instagram" autocomplete="off" data-validation="instagram"/>
-
+                <input type="text" placeholder="Facebook" name="facebook"/>
             </div>
             <div class="field_block col-12">
-                <input type="text" placeholder="<%=staticData.community_youtube%>" name="youtube" autocomplete="off" data-validation="youtube"/>
-
+                <input type="text" placeholder="Instagram" name="instagram"/>
             </div>
-            <div class="section_title col-12"><%=staticData.community_referral%> </div>
             <div class="field_block col-12">
-                <input type="text" placeholder="<%=staticData.community_referral%>" name="referral" autocomplete="off" data-validation="referral"/>
-
+                <input type="text" placeholder="Youtube" name="youtube"/>
+            </div>
+            <div class="field_block col-12">
+                <input type="text" placeholder="Referral code" name="referral"/>
             </div>
             <div class="button_block col-12">
-                <button id="submit" type="submit" class="validate_button"><%=staticData.community_send%></button>
+                <button type="submit"  class="validate_button" id="sendCommunity">SEND</button>
             </div>
             <div class="about_contacts col-12">
-                <div class="block_title"><%=staticData.community_whole%></div>
-                <div class="block_description"><%=staticData.community_make%></div>
-                <div class="notif_block"><%=staticData.community_have%></div>
+                <div class="block_title"><%=staticData.com_block_title%></div>
+                <div class="block_description"><%=staticData.com_block_description%></div>
+                <div class="notif_block"><%=staticData.com_notif_block%></div>
             </div>
         </form>
 
-        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-
         <script>
+
             $(document).on( "click","#sendCommunity", function() {
                 let formData = $('#c_form').serializeArray();
                 $.ajax({
@@ -108,9 +95,10 @@
                     }
                 });
             });
-        </script>
 
+        </script>
     </div>
+
     <div class="contacts_section" style="background-image: url('/images/desarrollo-web.png')">
         <div class="custom_container">
             <div class="contacts_list">
@@ -130,11 +118,6 @@
 
 <%- include('includes/footer.ejs') %>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
-<script src="validator/communityValidator.js"></script>
 <script src="/js/main.js"></script>
 </body>
 </html>
-
-

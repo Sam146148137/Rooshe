@@ -9,8 +9,8 @@ exports.getCommunity = (req, res) => {
     })
 };
 
-exports.postAddCommunity = (req, res) => {
-
+exports.postAddCommunity = async (req, res, next) => {
+try {
     const {error, value} = communityValidate(req.body);
     if (error) {
         console.error('ValidationError', error.message);
@@ -31,10 +31,11 @@ exports.postAddCommunity = (req, res) => {
     const cookContent = new communityModel({
         ...value
     })
-    function myFunction() {
-        setTimeout(function(){ return res.redirect('/'); }, 2000);
-    }
-    myFunction()
 
-    cookContent.save()
+   await cookContent.save()
+    return res.redirect('/')
+
+} catch (err) {
+    next(err)
+}
 };
