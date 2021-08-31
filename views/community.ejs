@@ -33,23 +33,23 @@
         <img src="/images/5fcf47cc0ff0404f51bc8630_3367077.jpg" alt="" title=""/>
     </div>
     <div class="custom_container">
-        <form action="/community" class="contact_form row" method="post" id="regForm" name="regForm">
+        <form action="/community" class="contact_form row" method="post" class="contact_form row" id="c_form">
             <div class="section_title col-12"><%=staticData.community_join%></div>
             <div class="field_block col-12 col-sm-6">
                 <input type="text" id="surname" name="surname" autocomplete="off" placeholder="<%=staticData.community_surname%>" data-validation="required"/>
-                <p id="p1"></p>
+                <div class="section_title col-12"><%=staticData.community_mandatory_surname%></div>
             </div>
             <div class="field_block col-12 col-sm-6">
                 <input type="text" id="name" name="name" autocomplete="off" placeholder="<%=staticData.community_name%>"data-validation="required"/>
-                <p id="p2"></p>
+                <div class="section_title col-12"><%=staticData.community_mandatory_name%></div>
             </div>
             <div class="field_block col-12">
                 <input type="email" id="email" name="email" autocomplete="off" placeholder="<%=staticData.community_email%>" data-validation="email"/>
-                <p id="p3"></p>
+                <div class="section_title col-12"><%=staticData.community_mandatory_email%></div>
             </div>
             <div class="field_block col-12">
                 <input type="text" id="phone" name="phone" autocomplete="off" placeholder="<%=staticData.community_phone%>" oninput="this.value=this.value.replace(/[^0-9+]/g,'');" data-validation="required"/>
-                <p id="p4"></p>
+                <div class="section_title col-12"><%=staticData.community_mandatory_phone%></div>
             </div>
             <div class="field_block col-12">
                 <select id="subject" name="subject" title="<%=staticData.community_level%>" class="selectpicker" data-validation="required">
@@ -90,68 +90,24 @@
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
         <script>
-            $(document).ready(function(){
-                $("#submit").click(function(){
-                    var name = $("#name").val();
-                    var surname = $("#surname").val();
-                    var email = $("#email").val();
-                    var phone = $("#phone").val();
-                    var subject = $("#subject").val();
-
-
-                    if(surname.length == "")
-                    {
-                        $("#p2").text("Please enter your name");
-                        $("#name").focus();
-                        return false;
+            $(document).on( "click","#sendCommunity", function() {
+                let formData = $('#c_form').serializeArray();
+                $.ajax({
+                    type: "POST",
+                    url: '/community',
+                    data: formData,
+                    success: function(result){
+                        alert('You have successfully registered')
+                        // $("#sus").toggleClass('invisible visible');
+                        location.reload();
+                    },
+                    error: function(result){
+                        $("html, body").animate({
+                            scrollTop: ($(document).height()-1700)
+                        }, 1000);
                     }
-
-                    else if(name.length == ""){
-                        $("#p1").text("Please enter your surname");
-                        $("#surname").focus();
-                        return false;
-                    }
-
-                    else if(email.length == ""){
-                        $("#p3").text("Please enter your email address");
-                        $("#email").focus();
-                        return false;
-                    }
-
-                    else if(phone.length == ""){
-                        $("#p4").text("Please enter your phone number");
-                        $("#phone").focus();
-                        return false;
-                    }
-
-                    else if(subject.length == ""){
-                        $("#p5").text("Please choose subject");
-                        $("#subject").focus();
-                        return false;
-                    }
-
-                    // else{
-                    //     var con = confirm("Are you Done?");
-                    //     if(con == true)
-                    //     {
-                    //         Swal.fire({
-                    //             icon: 'success',
-                    //             title: 'Welcome to our Team!',
-                    //             text: 'now you are registered home cook!',
-                    //             showConfirmButton: false,
-                    //             width: 500,
-                    //             padding: 100,
-                    //         })
-                    //         return true;
-                    //     }
-                    //     else{
-                    //         return false;
-                    //     }
-                    // }
                 });
             });
-
-
         </script>
 
     </div>
