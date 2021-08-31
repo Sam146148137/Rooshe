@@ -38,15 +38,17 @@
                 <span class="error_hint"><%=staticData.community_mandatory_name%></span>
             </div>
             <div class="field_block col-12">
-                <input type="text" autocomplete="off" placeholder="<%=staticData.community_email%>" name="address" data-validation="required"/>
+                <input type="text" autocomplete="off" placeholder="<%=staticData.community_email%>" id="email" name="email" data-validation="required"/>
                 <span class="error_hint"><%=staticData.community_mandatory_email%></span>
+<!--                <h5 id="result"></h5>-->
+            </div>
+
+            <div class="field_block col-12">
+                <input type="text" id="phone" name="phone" autocomplete="off" placeholder="<%=staticData.community_phone%>" oninput="this.value=this.value.replace(/[^0-9+]/g,'');" data-validation="required"/>
+                <span class="error_hint"><%=staticData.community_mandatory_phone%></span>
             </div>
             <div class="field_block col-12">
-                <input type="text" name="phone" autocomplete="off" placeholder="<%=staticData.community_phone%>" oninput="this.value=this.value.replace(/[^0-9+]/g,'');" data-validation="required"/>
-							<span class="individual_hint"><%=staticData.community_mandatory_phone%></span>
-            </div>
-            <div class="field_block col-12">
-                <select name="desc" data-validation="required"  title="Cooking level" class="selectpicker">
+                <select name="subject" data-validation="required"  title="Cooking level" class="selectpicker">
                     <option value="Beginner"><%=staticData.community_subject1%></option>
                     <option value="Experienced"><%=staticData.community_subject2%></option>
                     <option value="Certified cook"><%=staticData.community_subject3%></option>
@@ -74,6 +76,30 @@
                 <div class="notif_block"><%=staticData.com_notif_block%></div>
             </div>
         </form>
+
+<!--        <script>-->
+<!--            function validateEmail(email) {-->
+<!--                const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;-->
+<!--                return re.test(email);-->
+<!--            }-->
+
+<!--            function validate() {-->
+<!--                const $result = $("#result");-->
+<!--                const email = $("#email").val();-->
+<!--                $result.text("");-->
+
+<!--                if (validateEmail(email)) {-->
+<!--                    $result.text(email + " is valid :)");-->
+<!--                    $result.css("color", "green");-->
+<!--                } else {-->
+<!--                    $result.text(email + " is not valid :(");-->
+<!--                    $result.css("color", "red");-->
+<!--                }-->
+<!--                return false;-->
+<!--            }-->
+
+<!--            $("#email").on("input", validate);-->
+<!--        </script>-->
 
         <script>
 
