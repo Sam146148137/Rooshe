@@ -108,6 +108,9 @@
             $(document).on( "click","#sendCommunity", function() {
                 let formData = $('#c_form').serializeArray();
                 $.ajax({
+                    type: "POST",
+                    url: '/',
+                    data: formData,
                     success: function(result){
                         alert('You have successfully registered')
                         // $("#sus").toggleClass('invisible visible');
