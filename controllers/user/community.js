@@ -12,10 +12,10 @@ exports.getCommunity = (req, res) => {
 exports.postAddCommunity = async (req, res, next) => {
 try {
     const {error, value} = communityValidate(req.body);
-    if (error) {
-        console.error('ValidationError', error.message);
-        return res.status(404).json(error)
-    }
+    // if (error) {
+    //     console.error('ValidationError', error.message);
+    //     return res.status(404).json(error)
+    // }
     const message = {
 
         to: req.body.email,
