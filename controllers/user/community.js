@@ -11,11 +11,7 @@ exports.getCommunity = (req, res) => {
 
 exports.postAddCommunity = async (req, res, next) => {
 try {
-    const {error, value} = communityValidate(req.body);
-    // if (error) {
-    //     console.error('ValidationError', error.message);
-    //     return res.status(404).json(error)
-    // }
+    const {value} = communityValidate(req.body);
     const message = {
 
         to: req.body.email,
@@ -33,7 +29,7 @@ try {
     })
 
    await cookContent.save()
-    return res.redirect('/')
+    return res.redirect(`/${req.session.language || 'en'}`)
 
 } catch (err) {
     next(err)
