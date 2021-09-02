@@ -50,7 +50,6 @@ const communitySchema = new mongoose.Schema ({
     referral: {
         type: String,
         default: '',
-
     },
 });
 
