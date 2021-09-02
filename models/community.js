@@ -9,6 +9,12 @@ const communitySchema = new mongoose.Schema ({
         type: String,
         required: true,
     },
+    address: {
+        type: String,
+        minLength: 2,
+        maxLength: 256,
+        required: true,
+    },
     email: {
         type: String,
         required: true,
