@@ -3,11 +3,15 @@ const mongoose = require('mongoose');
 const communitySchema = new mongoose.Schema ({
     name: {
         type: String,
+        minLength: 2,
+        maxLength: 256,
         required: true,
     },
     surname: {
         type: String,
-        required: true,
+        minLength: 2,
+        maxLength: 256,
+        required: true
     },
     address: {
         type: String,
@@ -17,10 +21,14 @@ const communitySchema = new mongoose.Schema ({
     },
     email: {
         type: String,
+        minLength: 2,
+        maxLength: 256,
         required: true,
     },
     phone: {
-        type: Number,
+        type: String,
+        minLength: 2,
+        maxLength: 256,
         required: true,
     },
     subject: {
