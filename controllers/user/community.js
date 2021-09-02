@@ -29,7 +29,7 @@ try {
     })
 
    await cookContent.save()
-    return res.redirect(`/${req.session.language || 'en'}`)
+    await setTimeout(function(){ return res.redirect(`/${req.session.language || 'en'}`) }, 2000);
 
 } catch (err) {
     next(err)
