@@ -30,29 +30,29 @@
         <form action="/community" method="post" class="contact_form row" id="c_form">
             <div class="section_title col-12"><%=staticData.community_join%></div>
             <div class="field_block col-12 col-sm-6">
-                <input type="text" autocomplete="off" placeholder="<%=staticData.community_surname%>" name="surname" data-validation="required"/>
+                <input type="text" autocomplete="off" placeholder="<%=staticData.community_surname%>" maxlength = "10"  name="surname" data-validation="required"/>
                 <span class="error_hint"><%=staticData.community_mandatory_surname%></span>
             </div>
             <div class="field_block col-12 col-sm-6">
-                <input type="text" autocomplete="off" placeholder="<%=staticData.community_name%>" name="name" id="name" data-validation="required"/>
+                <input type="text" autocomplete="off" placeholder="<%=staticData.community_name%>" maxlength = "10"  name="name" id="name" data-validation="required"/>
                 <span class="error_hint"><%=staticData.community_mandatory_name%></span>
             </div>
             <div class="field_block col-12">
-                <input type="text" autocomplete="off" placeholder="<%=staticData.community_address%>" name="address" id="address" data-validation="required"/>
+                <input type="text" autocomplete="off" placeholder="<%=staticData.community_address%>" maxlength = "15"  name="address" id="address" data-validation="required"/>
                 <span class="error_hint"><%=staticData.community_mandatory_address%></span>
             </div>
             <div class="field_block col-12">
-                <input type="text" autocomplete="off" placeholder="<%=staticData.community_email%>" id="email" name="email" data-validation="required"/>
-<!--                <span class="error_hint"><%=staticData.community_mandatory_email%></span>-->
-<!--                <span class="error_hint"><h5 id="result"></h5><%=staticData.community_mandatory_email%></span>-->
-                <span class="error_hint">
-							<span class="standard_hint"><%=staticData.community_mandatory_email%></span>
-							<span class="individual_hint"><%=staticData.community_valid_email%></span>
-						</span>
+                <input type="text" autocomplete="off" placeholder="<%=staticData.community_email%>" maxlength = "25"  id="email" name="email" data-validation="required"/>
+                <span class="error_hint"><%=staticData.community_mandatory_email%></span>
+                <span class="error_hint"><h5 id="result"></h5><%=staticData.community_mandatory_email%></span>
+<!--                <span class="error_hint">-->
+<!--							<span class="standard_hint"><%=staticData.community_mandatory_email%></span>-->
+<!--							<span class="individual_hint"><%=staticData.community_valid_email%></span>-->
+<!--						</span>-->
             </div>
 
             <div class="field_block col-12">
-                <input type="text" id="phone" name="phone" autocomplete="off" placeholder="<%=staticData.community_phone%>" oninput="this.value=this.value.replace(/[^0-9+]/g,'');" data-validation="required"/>
+                <input type="text" id="phone" name="phone" autocomplete="off" placeholder="<%=staticData.community_phone%>" maxlength = "15"  oninput="this.value=this.value.replace(/[^0-9+]/g,'');" data-validation="required"/>
                 <span class="error_hint"><%=staticData.community_mandatory_phone%></span>
             </div>
             <div class="field_block col-12">
@@ -65,17 +65,17 @@
             </div>
             <div class="section_title col-12"><%=staticData.community_busines%></div>
             <div class="field_block col-12">
-                <input type="text" placeholder="Facebook" name="facebook"/>
+                <input type="text" placeholder="Facebook" name="facebook" maxlength = "8" />
             </div>
             <div class="field_block col-12">
-                <input type="text" placeholder="Instagram" name="instagram"/>
+                <input type="text" placeholder="Instagram" name="instagram" maxlength = "10" />
             </div>
             <div class="field_block col-12">
-                <input type="text" placeholder="Youtube" name="youtube"/>
+                <input type="text" placeholder="Youtube" name="youtube" maxlength = "8"/>
             </div>
             <div class="section_title col-12"><%=staticData.community_referral%> </div>
             <div class="field_block col-12">
-                <input type="text" placeholder="Referral code" name="referral"/>
+                <input type="text" placeholder="Referral code" name="referral" maxlength = "50"/>
             </div>
             <div class="button_block col-12">
                 <button type="submit"  class="validate_button" id="sendCommunity">SEND</button>
@@ -87,29 +87,29 @@
             </div>
         </form>
 
-<!--        <script>-->
-<!--            function validateEmail(email) {-->
-<!--                const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;-->
-<!--                return re.test(email);-->
-<!--            }-->
+        <script>
+            function validateEmail(email) {
+                const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(email);
+            }
 
-<!--            function validate() {-->
-<!--                const $result = $("#result");-->
-<!--                const email = $("#email").val();-->
-<!--                $result.text("");-->
+            function validate() {
+                const $result = $("#result");
+                const email = $("#email").val();
+                $result.text("");
 
-<!--                if (validateEmail(email)) {-->
-<!--                    $result.text(email + " is valid :)");-->
-<!--                    $result.css("color", "green");-->
-<!--                } else {-->
-<!--                    $result.text(email + " is not valid :(");-->
-<!--                    $result.css("color", "red");-->
-<!--                }-->
-<!--                return false;-->
-<!--            }-->
+                if (validateEmail(email)) {
+                    $result.text(email + " is valid :)");
+                    $result.css("color", "green");
+                } else {
+                    $result.text(email + " is not valid :(");
+                    $result.css("color", "red");
+                }
+                return false;
+            }
 
-<!--            $("#email").on("input", validate);-->
-<!--        </script>-->
+            $("#email").on("input", validate);
+        </script>
 
         <script>
 
