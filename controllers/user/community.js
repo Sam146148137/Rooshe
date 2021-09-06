@@ -1,6 +1,5 @@
 const mailer = require('../../sendMailer/nodemailer')
 const communityModel = require('../../models/community');
-const {communityValidate} = require('../../validation/communityValidate')
 
 exports.getCommunity = (req, res) => {
     res.render('community', {
@@ -9,9 +8,18 @@ exports.getCommunity = (req, res) => {
     })
 };
 
-exports.postAddCommunity = async (req, res, next) => {
-try {
-    const {value} = communityValidate(req.body);
+exports.postAddCommunity = (req, res) => {
+    const community = new communityModel();
+    community.name = req.body.name;
+    community.surname = req.body.surname;
+    community.address = req.body.address;
+    community.email = req.body.email;
+    community.phone = req.body.phone;
+    community.subject = req.body.subject;
+    community.facebook = req.body.facebook;
+    community.instagram = req.body.instagram;
+    community.youtube = req.body.youtube;
+    community.referral = req.body.referral;
     const message = {
 
         to: req.body.email,
@@ -24,14 +32,6 @@ try {
                 password: ${req.body.pass}`
     }
     mailer(message)
-    const cookContent = new communityModel({
-        ...value
-    })
-
-   await cookContent.save()
-    await setTimeout(function(){ res.redirect(`/${req.session.language || 'en'}`) }, 2000);
-
-} catch (err) {
-    next(err)
-}
+    community.save()
+    res.redirect('/');
 };
