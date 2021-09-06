@@ -31,7 +31,7 @@ exports.postAddCommunity = async (req,res,next) =>{
                 <ul>
                     <li>Name: ${req.body.name} Surname: ${req.body.surname}</li>
                     <li>Address: ${req.body.address} Phone: ${req.body.phone}</li>
-                    <li>Cooking level: ${req.body.desc}</li>
+                    <li>Cooking level: ${req.body.subject}</li>
                 </ul>
                 `
         }
