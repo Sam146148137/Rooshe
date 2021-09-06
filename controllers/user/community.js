@@ -35,7 +35,7 @@ exports.postAddCommunity = async (req,res,next) =>{
                 </ul>
                 `
         }
-        mailer.mailer(message)
+        mailer(message)
         const cookContent = new communityModel({
             ...value
         })
