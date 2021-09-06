@@ -13,15 +13,18 @@ exports.postAddCommunity = async (req, res, next) => {
     try {
         const {value} = communityValidate(req.body);
         const message = {
-
             to: req.body.email,
-            subject: 'Congratulations! You are successfuly registred on our site',
-            text: `Congratulations! You are successfuly registred on our site
-       
-       your account details
-       
-                login: ${req.body.email}
-                password: ${req.body.pass}`
+            subject: 'ROOSH GROUP',
+            html:
+                `
+                <h3>congratulations! You are already a 'homecook'</h3>
+                <p>your details</p>
+                <ul>
+                    <li>Name: ${req.body.name} Surname: ${req.body.surname}</li>
+                    <li>Address: ${req.body.address} Phone: ${req.body.phone}</li>
+                    <li>Cooking level: ${req.body.subject}</li>
+                </ul>
+                `
         }
         mailer(message)
         const cookContent = new communityModel({

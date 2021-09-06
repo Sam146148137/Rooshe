@@ -30,25 +30,25 @@
         <form action="/community" method="post" class="contact_form row" id="c_form">
             <div class="section_title col-12"><%=staticData.community_join%></div>
             <div class="field_block col-12 col-sm-6">
-                <input type="text"  placeholder="<%=staticData.community_surname%>" maxlength = "10"  name="surname" data-validation="required"/>
+                <input type="text" autocomplete="off" placeholder="<%=staticData.community_surname%>" maxlength = "10"  name="surname" data-validation="required"/>
                 <span class="error_hint"><%=staticData.community_mandatory_surname%></span>
             </div>
             <div class="field_block col-12 col-sm-6">
-                <input type="text"  placeholder="<%=staticData.community_name%>" maxlength = "10"  name="name" id="name" data-validation="required"/>
+                <input type="text"  autocomplete="off" placeholder="<%=staticData.community_name%>" maxlength = "10"  name="name" id="name" data-validation="required"/>
                 <span class="error_hint"><%=staticData.community_mandatory_name%></span>
             </div>
             <div class="field_block col-12">
-                <input type="text"  placeholder="<%=staticData.community_address%>" maxlength = "15"  name="address" id="address" data-validation="required"/>
+                <input type="text"  autocomplete="off" placeholder="<%=staticData.community_address%>" maxlength = "15"  name="address" id="address" data-validation="required"/>
                 <span class="error_hint"><%=staticData.community_mandatory_address%></span>
             </div>
             <div class="field_block col-12">
-                <input type="text"  placeholder="<%=staticData.community_email%>" maxlength = "25"  id="email" name="email" data-validation="required"/>
+                <input type="text" autocomplete="off" placeholder="<%=staticData.community_email%>" maxlength = "25"  id="email" name="email" data-validation="required"/>
                 <!--                <span class="error_hint"><%=staticData.community_mandatory_email%></span>-->
                 <span class="error_hint"><h5 id="result"></h5><%=staticData.community_mandatory_email%></span>
             </div>
 
             <div class="field_block col-12">
-                <input type="text" id="phone" name="phone"  placeholder="<%=staticData.community_phone%>" maxlength = "15"  oninput="this.value=this.value.replace(/[^0-9+]/g,'');" data-validation="required"/>
+                <input type="text" id="phone" name="phone" autocomplete="off" placeholder="<%=staticData.community_phone%>" maxlength = "15"  oninput="this.value=this.value.replace(/[^0-9+]/g,'');" data-validation="required"/>
                 <span class="error_hint"><%=staticData.community_mandatory_phone%></span>
             </div>
             <div class="field_block col-12">
@@ -74,7 +74,7 @@
                 <input type="text" placeholder="Referral code" name="referral" maxlength = "50"/>
             </div>
             <div class="button_block col-12">
-                <button type="submit"  class="validate_button" id="sendCommunity">SEND</button>
+                <button type="submit"  class="validate_button" id="sendCommunity"><%=staticData.community_send%></button>
             </div>
             <div class="about_contacts col-12">
                 <div class="block_title"><%=staticData.community_whole%></div>
