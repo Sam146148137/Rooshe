@@ -88,6 +88,7 @@
                 const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
                 return re.test(email);
             }
+
             function validate() {
                 const $result = $("#result");
                 const email = $("#email").val();
@@ -102,12 +103,12 @@
                 }
                 return false;
             }
+
             $("#email").on("input", validate);
-
-
         </script>
 
         <script>
+
             $(document).on( "click","#sendCommunity", function() {
                 let formData = $('#c_form').serializeArray();
                 $.ajax({
@@ -115,15 +116,7 @@
                     url: '/community',
                     data: formData,
                     success: function(result){
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Welcome to our Team!',
-                            text: 'now you are registered home cook!',
-                            showConfirmButton: false,
-                            width: 500,
-                            padding: 100,
-                        })
-                        // alert('You have successfully registered')
+                        alert('You have successfully registered')
                         // $("#sus").toggleClass('invisible visible');
                         location.redirect('/');
                     },
