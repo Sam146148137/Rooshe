@@ -74,6 +74,27 @@
 .page_title {
   max-width: 460px; }
 
+.page_description {
+  margin: 20px 51px 20px;
+  font-size: 180%;
+  line-height: 1.28em;
+  /*display: -webkit-box;*/
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  opacity: 0;
+  color: #ffffff;
+  animation-name: showWithOpacity;
+  animation-duration: 1.8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-delay: 0.7s;
+}
+
 .about_contacts {
   padding-top: 40px;
   font-size: 180%;
