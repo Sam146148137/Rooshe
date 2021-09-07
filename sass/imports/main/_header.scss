@@ -193,7 +193,7 @@
     }
     @media #{$until767} {
         &_bottom .custom_container {
-            justify-content: end;
+            justify-content: flex-start;
         }
         .languages {
             margin-left: auto;

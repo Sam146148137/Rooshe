@@ -614,7 +614,7 @@ select {
     .header {
       height: 58px; }
       .header_bottom .custom_container {
-        justify-content: end; }
+        justify-content: flex-start; }
       .header .languages {
         margin-left: auto;
         padding-right: 40px; }

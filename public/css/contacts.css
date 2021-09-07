@@ -19,7 +19,16 @@
     margin-bottom: 25px;
     color: #ffffff;
     text-align: center; }
-
+.contact_form.community_page .form_inner .page_description{
+  margin: 0 auto 20px;
+}
+.contact_form.community_page .form_inner{
+  max-width: 560px;
+  margin: 0 auto;
+}
+.contact_form.community_page {
+  max-width: 100%;
+}
 .map_block {
   position: relative;
   overflow: hidden;
