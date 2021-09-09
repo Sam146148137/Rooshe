@@ -1,7 +1,6 @@
 const mailer = require('../../sendMailer/nodemailer')
 const communityModel = require('../../models/community');
 const {communityValidate} = require('../../validation/communityValidate')
-const {validationResult} = require("express-validator");
 
 exports.getCommunity = (req, res) => {
     res.render('community', {
@@ -12,13 +11,6 @@ exports.getCommunity = (req, res) => {
 
 exports.postAddCommunity = async (req, res, next) => {
     try {
-
-        const errors = validationResult(req)
-        if(!errors.isEmpty()) {
-            console.log(errors)
-            return res.status(422).render('404')
-        }
-
         const {value} = communityValidate(req.body);
         const message = {
             to: req.body.email,
@@ -40,7 +32,7 @@ exports.postAddCommunity = async (req, res, next) => {
         })
 
         await cookContent.save()
-        res.redirect(`/${req.session.language || 'en'}`)
+        await setTimeout(function(){ res.redirect(`/${req.session.language || 'en'}`) }, 2000);
 
     } catch (err) {
         next(err)

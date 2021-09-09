@@ -13,9 +13,6 @@ const {changeLanguage} = require('../controllers/user/language')
 
 const errorController = require('../controllers/user/error')
 
-
-const { check } = require('express-validator');
-
 router.get('/', (req, res) => {
     res.redirect('/en')
 })
@@ -29,9 +26,7 @@ router.get('/:language/blog/:id', language, findController.findContent);
 router.get('/:language/community',language, communityController.getCommunity);
 
 //post community
-router.post('/community', [check('email').
-isEmail()
-    .normalizeEmail()], communityController.postAddCommunity);
+router.post('/community', communityController.postAddCommunity);
 
 // get AboutUs
 router.get('/:language/about',language, aboutController.getAboutUS);
