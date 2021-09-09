@@ -44,9 +44,12 @@
                     <span class="error_hint"><%=staticData.community_mandatory_address%></span>
                 </div>
                 <div class="field_block col-12">
-                    <input type="text" autocomplete="off" placeholder="<%=staticData.community_email%>" maxlength = "25"  id="email" name="email" data-validation="required"/>
-                    <!--                <span class="error_hint"><%=staticData.community_mandatory_email%></span>-->
-                    <span class="error_hint"><h5 id="result"></h5><%=staticData.community_mandatory_email%></span>
+                    <input type="text" autocomplete="off" placeholder="<%=staticData.community_email%>" maxlength = "25"  id="email" name="email" data-validation="email"/>
+
+                    <span class="error_hint">
+							<span class="standard_hint"><%=staticData.community_mandatory_email%></span>
+							<span class="individual_hint">invalid e-mail</span>
+						</span>
                 </div>
                 <div class="field_block col-12">
                     <input type="text" id="phone" name="phone" autocomplete="off" placeholder="<%=staticData.community_phone%>" maxlength = "15"  oninput="this.value=this.value.replace(/[^0-9+]/g,'');" data-validation="required"/>
@@ -85,29 +88,6 @@
             </div>
         </form>
 
-        <script>
-            function validateEmail(email) {
-                const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-                return re.test(email);
-            }
-
-            function validate() {
-                const $result = $("#result");
-                const email = $("#email").val();
-                $result.text("");
-
-                if (validateEmail(email)) {
-                    $result.text(email + " is valid :)");
-                    $result.css("color", "green");
-                } else {
-                    $result.text(email + " is not valid :(");
-                    $result.css("color", "red");
-                }
-                return false;
-            }
-
-            $("#email").on("input", validate);
-        </script>
 
         <script>
 
