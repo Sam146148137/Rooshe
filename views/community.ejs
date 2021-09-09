@@ -90,7 +90,6 @@
 
 
         <script>
-
             $(document).on( "click","#sendCommunity", function() {
                 let formData = $('#c_form').serializeArray();
                 $.ajax({
@@ -100,7 +99,7 @@
                     success: function(result){
                         alert('You have successfully registered')
                         // $("#sus").toggleClass('invisible visible');
-                        location.redirect('/');
+                        // alert(result.msg)
                     },
                     error: function(result){
                         $("html, body").animate({
@@ -109,7 +108,6 @@
                     }
                 });
             });
-
         </script>
     </div>
 
