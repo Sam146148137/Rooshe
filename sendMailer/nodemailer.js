@@ -1,12 +1,11 @@
 const nodemailer = require ('nodemailer');
-const swal = require('sweetalert2')
 const transporter = nodemailer.createTransport({
         host: 'smtp.mail.ru',
         port: 465,
         secure: true, // true for 465, false for other ports
         auth: {
             user: 'rooshe@mail.ru',
-            pass: '98myWRkuYRFS9S3WUSh1'
+            pass: 'NodeMailer99'
         }
     },
     {
