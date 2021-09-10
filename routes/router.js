@@ -28,9 +28,9 @@ router.get('/:language/blog/:id', language, findController.findContent);
 router.get('/:language/community',language, communityController.getCommunity);
 
 //post community
-router.post('/community', router.post('/community', [check('email').
+router.post('/community', [check('email').
 isEmail()
-    .normalizeEmail()], communityController.postAddCommunity));
+    .normalizeEmail()], communityController.postAddCommunity);
 
 // get AboutUs
 router.get('/:language/about',language, aboutController.getAboutUS);
