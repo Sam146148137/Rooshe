@@ -14,12 +14,16 @@ exports.getCommunity = (req, res) => {
 exports.postAddCommunity = async (req, res, next) => {
     try {
 
-        const errors = validationResult(req)
-        if(!errors.isEmpty()) {
-            console.log(errors)
-            return res.status(422).render('404')
+        const errors = validationResult(req);
+
+        if (!errors.isEmpty()) {
+            return res.status(400).json({
+                success: false,
+                errors: errors.array()
+            });
         }
 
+        res.status(200)
 
         const {value} = communityValidate(req.body);
         const message = {
