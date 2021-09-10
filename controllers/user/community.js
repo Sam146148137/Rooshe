@@ -19,12 +19,11 @@ exports.postAddCommunity = async (req, res, next) => {
         if (!errors.isEmpty()) {
             return res.status(400).json({
                 success: false,
-                errors: errors.array()
+                errors: "ivalid validation Sam"
             });
         }
 
         res.status(200)
-
         const {value} = communityValidate(req.body);
         const message = {
             to: req.body.email,
@@ -34,8 +33,10 @@ exports.postAddCommunity = async (req, res, next) => {
                 <h3>congratulations! You are already a 'homecook'</h3>
                 <p>your details</p>
                 <ul>
-                    <li>Name: ${req.body.name} Surname: ${req.body.surname}</li>
-                    <li>Address: ${req.body.address} Phone: ${req.body.phone}</li>
+                    <li>Name: ${req.body.name} </li>
+                    <li>Surname: ${req.body.surname} </li>
+                    <li>Address: ${req.body.address} </li>
+                    <li>Phone: ${req.body.phone}</li>
                     <li>Cooking level: ${req.body.subject}</li>
                 </ul>
                 `
