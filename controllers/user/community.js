@@ -8,6 +8,7 @@ exports.getCommunity = (req, res) => {
     res.render('community', {
         staticData:req.staticData,
         lang: req.session.language || 'en',
+        magia: req.originalUrl.substring(3),
     })
 };
 

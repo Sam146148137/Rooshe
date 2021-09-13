@@ -12,22 +12,14 @@
                             <li><a href="/<%=lang%>/blog"><%=staticData.nav_blog%></a></li>
                             <li><a href="/<%=lang%>/community"><%=staticData.nav_community%></a></li>
                             <li><a href="/<%=lang%>/about"><%=staticData.nav_about%></a></li>
-                            <li><select value="<%=lang%>" name="language" id="language" onclick="changeLanguage()" style="all: initial; color: aqua; background: black">
-                                    <%if(lang === 'en'){%>
-                                        <option value="hy">HY</option>
-                                        <option selected value="en">EN</option>
-                                    <%}else{%>
-                                        <option selected value="hy">HY</option>
-                                        <option  value="en">EN</option>
-                                    <%}%>
-                                </select></li>
+
                         </ul>
                     </div>
                 </div>
-<!--                <ul class="languages">-->
-<!--                    <li class="current_lg"><a href="" >ՀՅ</a></li>-->
-<!--                    <li><a href="">EN</a></li>-->
-<!--                </ul>-->
+                <ul class="languages">
+                    <li <%if(lang === 'hy'){ %> class="current_lg" <%}%>><a href="/hy<%=magia%>" >Հյ</a></li>
+                    <li <%if(lang === 'en'){ %> class="current_lg" <%}%>><a href="/en<%=magia%>" >En</a></li>
+                </ul>
             </div>
         </div>
     </div>

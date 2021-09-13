@@ -81,16 +81,15 @@
                     <button type="submit"  class="validate_button" id="sendCommunity"><%=staticData.community_send%></button>
                 </div>
                 <div class="about_contacts col-12">
-                    <div class="block_title"><%=staticData.community_whole%></div>
-                    <div class="block_description"><%=staticData.community_make%></div>
-                    <div class="notif_block"><%=staticData.community_have%></div>
+<!--                    <div class="block_title"><%=staticData.community_whole%></div>-->
+<!--                    <div class="block_description"><%=staticData.community_make%></div>-->
+<!--                    <div class="notif_block"><%=staticData.community_have%></div>-->
                 </div>
             </div>
         </form>
 
 
         <script>
-
             $(document).on( "click","#sendCommunity", function() {
                 let formData = $('#c_form').serializeArray();
                 $.ajax({
@@ -113,7 +112,6 @@
                     // }
                 });
             });
-
         </script>
     </div>
 

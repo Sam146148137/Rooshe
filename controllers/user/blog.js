@@ -17,6 +17,7 @@ exports.getBlog = (req, res, next) => {
                         blogs,
                         current: page,
                         pages: Math.ceil(count / perPage),
+                        magia: req.originalUrl.substring(3),
                     })
                 });
             })

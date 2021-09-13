@@ -8,8 +8,8 @@ exports.getHome = (req, res) => {
             res.render('index', {
                 staticData:req.staticData,
                 lang: req.session.language || 'en',
-                item: blogs
-
+                item: blogs,
+                magia: req.originalUrl.substring(3),
             });
         })
 };

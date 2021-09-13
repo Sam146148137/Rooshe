@@ -10,6 +10,7 @@ exports.findContent = async (req, res) => {
     res.render('news_inner', {
         staticData: req.staticData,
         lang: req.session.language || 'en',
+        magia: req.originalUrl.substring(3),
         thisBlog
     });
 };
