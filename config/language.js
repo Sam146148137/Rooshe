@@ -12,7 +12,7 @@ module.exports =
          home_homecooks: "HOME COOKS",
          home_homecooks_inside: "Make money from your own kitchen. You decide your menu, your prices and your schedule.",
          home_better: "A better way to build your food business",
-         home_focus: "Սիրու՞մ եք պատրաստել: Արդյո՞ք ձեր ընկերներն ու հարազատները երկրպագուն են ձեր պատրաստած ուտելիքի: Rooshe- ի միջոցով  պատրաստելու ձեր հաճույքը վերածեք սեփական բիզնեսի: Եղեք մեր առաջին գործընկերներից և ստացեք մի շարք առավելություններ։",
+         home_focus: "Do you love to cook? Do your friends and family rave over your food? With Rooshe, you can turn your joy for cooking into your own business!  Be our early user and get benefits. ",
          home_join: "JOIN US",
          home_blog: "BLOG",
          home_view: "VIEW ALL",
@@ -106,7 +106,8 @@ module.exports =
         home_homecooks: "Տնային տնտեսուհիներ",
         home_homecooks_inside: "Վաստակեք գումար սեփական խոհանոցից: Դուք եք որոշում ձեր ճաշացանկը, գները և ժամանակացույցը",
         home_better: "Ձեր սննդի բիզնեսը կառուցելու ավելի լավ միջոց",
-        home_focus: "Սիրու՞մ եք պատրաստել։ Ձեր ընկերները և ընտանիքի անդամները պաշտու՞մ են Ձեր ուտեստները։ Rooshe (Ռուշ)֊ի հետ Դուք կարող եք պատրաստելու Ձեզ հաճույքը դարձնել սեփական փոքրիկ բիզնես։ Եղեք մեր առաջին գործընկերներից մեկը և ստացեք առավելություններ։",
+        home_focus: "Սիրու՞մ եք պատրաստել: Արդյո՞ք ձեր ընկերներն ու հարազատները երկրպագուն են ձեր պատրաստած ուտելիքի: Rooshe- ի միջոցով  պատրաստելու ձեր հաճույքը վերածեք սեփական բիզնեսի: Եղեք մեր առաջին գործընկերներից և ստացեք մի շարք առավելություններ։\n" +
+            "Միացեք մեզ:",
         home_join: "ՄԻԱՑԵՔ ՄԵԶ",
         home_blog: "Բլոգ",
         home_view: "Տեսնել բոլորը",
