@@ -62,7 +62,7 @@ module.exports =
          about_rooshe: "Rooshe is a multisided platform that connects users to strictly vetted and talented home cooks. All through an innovative platform that allows users to purchase home-cooked meals while watching streaming of how the dish is prepared.\n" +
              "                            We offer a unique mix of concepts, where we combine social media, video content and the marketplace all together creating an opportunity to increase trust and build relationships between all sides of the platform.\n" +
              "                            Our platform gives an opportunity to order right at the moment of watching streams and videos with the help of in-video shopping. Our ML-based algorithm will match client’s needs, interests and lifestyle and find awesome food from the nearest location.",
-         about_what: "Press",
+
          about_epic: "EPIC Spring 2021 Incubator Program",
          about_streammeal: "Streameal (now Rooshe) had a privilege to participate in Spring 2021 Incubator Program of the Entrepreneurship and Product Innovation Center (EPIC) of the American University of Armenia (AUA).",
          about_streammeal2: "Out of 36 applicant startups with a diverse range of startup ideas, ranging from agriculture to artificial intelligence, 8 startups were chosen to participate in the program including us.",
@@ -76,6 +76,7 @@ module.exports =
          about_connectCooking: "connecting cooking enthusiasts and foodies by creating new concept",
          about_empowering: "Empowering the potential",
          about_unlock: "Unlock the real potential of everyone who will be able to earn an income utilizing available resources from the comfort of their home",
+         about_what: "Press",
          about_meet: "Meet Our Team",
          about_arshak: "Arshak",
          about_arshak_about: "Seasoned full stack developer with over 12 years in the field։",
@@ -156,7 +157,6 @@ module.exports =
         about_we_connect: "Մենք միավորում ենք մարդկանց սննդի միջոցով",
         about_rooshe: "Ռուշը բազմակողմանի հարթակ է, որը միավորում է տնական սնունդի սիրահարներին և տնային խոհարարներին։  Հավելվածը հնարավորություն է տալիս զբաղված օգտատերերին պատվիրել տնային կերակուրներ, փորձել տարբեր խոհանոցներ և բաղադրատոմսեր, իսկ տնային խոհարարներին՝ լրացուցիչ եկամուտ վաստակել։ \n  "
 +               " Եվ այս ամենը նորարարական հարթակի միջոցով, որը թույլ է տալիս օգտատերերին գնել տնական ուտեստներ ՝ միաժամանակ դիտելով ճաշատեսակի պատրաստման ընթացքը:",
-        about_what: "Այն, ինչ մենք արեցինք",
         about_epic: "EPIC Spring 2021 ինկուբատոր ծրագիր",
         about_streammeal: "Streameal- ը (այժմ ՝ Rooshe) արտոնություն ունեցավ մասնակցելու Հայաստանի ամերիկյան համալսարանի (ՀԱՀ) Ձեռներեցության և արտադրանքի ինովացիոն կենտրոնի (EPIC) 2021 թվականի գարնանային ինկուբատոր ծրագրին:",
         about_streammeal2: "Գործարկման գաղափարների բազմազան տեսականի ունեցող 36 հայտատուներից ՝ սկսած գյուղատնտեսությունից մինչև արհեստական բանականություն, ծրագրին մասնակցելու համար ընտրվել է 8 ստարտափ ՝ ներառյալ մեզ:",
@@ -170,6 +170,7 @@ module.exports =
         about_connectCooking: "միացնելով խոհարարության սիրահարներին և սննդարարներին՝ ստեղծելով նոր հայեցակարգ",
         about_empowering: "Ներուժի հզորացում",
         about_unlock: "Բացահայտեք բոլորի իրական ներուժը, ովքեր կկարողանան եկամուտ ստանալ ՝ օգտագործելով իրենց տան հարմարավետությունից առկա ռեսուրսները",
+        about_what: "Մամուլ",
         about_meet: "Մեր թիմը",
         about_arshak: "Արշակ",
         about_arshak_about: "Համեմված լիարժեք խմբաքանակի մշակող ՝ ոլորտում ավելի քան 12 տարի:",
