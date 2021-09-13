@@ -173,7 +173,7 @@ module.exports =
         about_what: "Մամուլ",
         about_meet: "Մեր թիմը",
         about_arshak: "Արշակ",
-        about_arshak_about: "Համեմված լիարժեք խմբաքանակի մշակող ՝ ոլորտում ավելի քան 12 տարի:",
+        about_arshak_about: "ոլորտում ավելի քան 12 տարի:",
         about_teresa: "Թերեզա",
         about_teresa_about: "Հյուրընկալության մասնագետ ՝ ավելի քան 7 տարվա փորձով:",
         about_suren: "Սուրեն",
