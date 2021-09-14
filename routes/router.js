@@ -11,6 +11,8 @@ const communityController = require('../controllers/user/community');
 const portfolioController = require('../controllers/user/portfolio');
 const {changeLanguage} = require('../controllers/user/language')
 
+const contactController = require('../controllers/user/contact_us')
+
 const errorController = require('../controllers/user/error')
 
 router.get('/', (req, res) => {
@@ -25,8 +27,13 @@ router.get('/:language/blog/:id', language, findController.findContent);
 
 router.get('/:language/community',language, communityController.getCommunity);
 
+router.get('/:language/contact_us',language, contactController.getContact);
+
 //post community
 router.post('/community', communityController.postAddCommunity);
+
+
+router.post('/contact_us', contactController.postAddContact);
 
 // get AboutUs
 router.get('/:language/about',language, aboutController.getAboutUS);

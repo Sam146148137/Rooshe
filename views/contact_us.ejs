@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title><%=staticData.community_title%></title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-select.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/contacts.css">
+    <link rel="shortcut icon" href="/css/images/favicon.svg"/>
+    <script src="/js/jquery-3.3.1.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/bootstrap-select.js"></script>
+    <script src="/js/jquery.form-validator.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+<%- include('includes/header.ejs') %>
+
+<div class="content">
+    <div class="page_head_block">
+        <img src="/images/5fcf47cc0ff0404f51bc8630_3367077.jpg" alt="" title=""/>
+    </div>
+    <div class="custom_container">
+        <form action="/contact_us" method="post" class="contact_form community_page" id="c_form">
+            <div class="section_title col-12"><%=staticData.contact_us%></div>
+<!--            <div class="page_description"><%=staticData.community_become_inside%></div>-->
+            <div class="form_inner row">
+                <div class="field_block col-12 col-sm-6">
+                    <input type="text"  autocomplete="off" placeholder="<%=staticData.community_name%>" maxlength = "10"  name="name" id="name" data-validation="required"/>
+                    <span class="error_hint"><%=staticData.community_mandatory_name%></span>
+                </div>
+                <div class="field_block col-12 col-sm-6">
+                    <input type="text" autocomplete="off" placeholder="<%=staticData.community_surname%>" maxlength = "10"  name="surname" data-validation="required"/>
+                    <span class="error_hint"><%=staticData.community_mandatory_surname%></span>
+                </div>
+                <div class="field_block col-12">
+                    <input type="text" id="phone" name="phone" autocomplete="off" placeholder="<%=staticData.community_phone%>" maxlength = "15"  oninput="this.value=this.value.replace(/[^0-9+]/g,'');" data-validation="required"/>
+                    <span class="error_hint"><%=staticData.community_mandatory_phone%></span>
+                </div>
+                <div class="field_block col-12">
+                    <textarea placeholder="<%=staticData.contact_description%>" id="description" name="description" rows="4" cols="50" maxlength = "5000" data-validation="required"></textarea>
+                    <span class="error_hint"><%=staticData.contact_description_error%></span>
+                </div>
+                <div class="button_block col-12">
+                    <button type="submit"  class="validate_button" id="send_contact"><%=staticData.community_send%></button>
+                </div>
+                <div class="about_contacts col-12">
+<!--                    <div class="block_title"><%=staticData.community_whole%></div>-->
+<!--                    <div class="block_description"><%=staticData.community_make%></div>-->
+<!--                    <div class="notif_block"><%=staticData.community_have%></div>-->
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="contacts_section" style="background-image: url('/images/desarrollo-web.png')">
+        <div class="custom_container">
+            <div class="contacts_list">
+                <h2 class="list_title"><%=staticData.community_rooshe%></h2>
+                <div class="list_inner">
+                    <%=staticData.community_avenue%>
+                    <br/><%=staticData.community_unit%>
+                    <br/>
+                    <br/><a href="tel:8188597667" class="phone_link">+374-43-58-24-24</a>
+                    <br/>
+                    <br/><a href="mailto:sales@loremusa.com">rooshe@mail.ru</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('includes/footer.ejs') %>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
