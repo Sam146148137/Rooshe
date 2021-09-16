@@ -9,6 +9,7 @@ const adminContentController = require('../controllers/admin/add-content-control
 const adminAddTeamController = require('../controllers/admin/add-team');
 const findController = require('../controllers/admin/findBlog');
 const editController = require('../controllers/admin/edit');
+const editTeamController = require('../controllers/admin/edit_team_members');
 const homecookController = require('../controllers/admin/homecook');
 
 const upload = adminContentController.upload;
@@ -46,10 +47,16 @@ router.get('/admin/:id', authMiddleware.requireAuth, findController.findContent)
 //Edit get
 router.get('/admin/edit/:id', authMiddleware.requireAuth, editController.editBlog);
 
+router.get('/admin/editt/:id', authMiddleware.requireAuth, editTeamController.editTeam);
+
 // Update post
 router.post('/admin/update/:id', authMiddleware.requireAuth, upload.single('image'), editController.updateBlog);
+
+router.post('/admin/updatee/:id', authMiddleware.requireAuth, uploadTeamMemberPhoto.single('image'), editTeamController.updateTeam);
 //Delete Blog
 router.get('/admin/delete/:id', authMiddleware.requireAuth, editController.deleteBlog);
+
+router.get('/admin/deletee/:id', authMiddleware.requireAuth, editTeamController.deleteTeamMember);
 
 
 module.exports = router;
