@@ -77,87 +77,25 @@
             <!--                    </li>-->
             <!--                </ul>-->
             <!--            </div>-->
-            <div class="page_title"><%=staticData.about_meet%></div>
+            <div class="page_title"><%=staticData.about_team%></div>
             <div class="team_block col-xl-9">
                 <ul class="row">
+                    <% for (var i = 0; i < teamMember.length; i++) { %>
+
                     <li class="col-lg-4 col-sm-6">
                         <div class="team_inner">
-                            <img src="/images/1631711239936--Arshak.jpg" title="" alt="" />
+                            <img src="/images/<%= teamMember[i].image %>" title="" alt="" />
                             <div class="info_team">
-                                <div class="team_name"><%=staticData.about_arshak%></div>
+                                <div class="team_name"><%- teamMember[i].name %></div>
                                 <div class="team_description">
-                                    <%=staticData.about_arshak_about%>
-                                    <br />
-                                    Co-founder at SmartApaga LLC
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-sm-6">
-                        <div class="team_inner">
-                            <img src="/images/1631711288897--Theresa.jpg" title="" alt="" />
-                            <div class="info_team">
-                                <div class="team_name"><%=staticData.about_teresa%></div>
-                                <div class="team_description">
-                                    <%=staticData.about_teresa_about%>
-                                    <br />
-                                    Co-founder at hosprof.com
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-sm-6">
-                        <div class="team_inner">
-                            <img src="/images/1631711338663--Suren.jpg" title="" alt="" />
-                            <div class="info_team">
-                                <div class="team_name"><%=staticData.about_suren%></div>
-                                <div class="team_description">
-                                    <%=staticData.about_suren_about%>
-                                    <br />
+                                    <%- teamMember[i].desc %>
+                                    <br />rs
 
                                 </div>
                             </div>
                         </div>
                     </li>
-                    <li class="col-lg-4 col-sm-6">
-                        <div class="team_inner">
-                            <img src="/images/1631711316631--Hayk.jpg" title="" alt="" />
-                            <div class="info_team">
-                                <div class="team_name"><%=staticData.about_hayk%></div>
-                                <div class="team_description">
-                                    <%=staticData.about_hayk_about%>
-                                    <br />
-
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-sm-6">
-                        <div class="team_inner">
-                            <img src="/images/1631711265848--Iza.jpg" title="" alt="" />
-                            <div class="info_team">
-                                <div class="team_name"><%=staticData.about_iza%></div>
-                                <div class="team_description">
-                                    <%=staticData.about_iza_about%>
-                                    <br />
-
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-sm-6">
-                        <div class="team_inner">
-                            <img src="/images/1631711217988--Anahit.jpg" title="" alt="" />
-                            <div class="info_team">
-                                <div class="team_name"><%=staticData.about_anahit%></div>
-                                <div class="team_description">
-                                    <%=staticData.about_anahit_about%>
-                                    <br />
-
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+                        <% } %>
                 </ul>
             </div>
         </div>
