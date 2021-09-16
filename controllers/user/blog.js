@@ -2,7 +2,8 @@ const contentModel = require('../../models/contentModel');
 
 exports.getBlog = (req, res, next) => {
     try{
-
+        const perPage = 6
+        const page = req.query.page || 1
         contentModel.find({})
             .sort({'createDate': -1})
             .skip((perPage * page) - perPage)
