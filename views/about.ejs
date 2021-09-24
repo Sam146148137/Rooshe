@@ -55,6 +55,7 @@
                             <div class="drop_inner">
                                 <%=staticData.about_pass%>
                                 <a href="/<%=lang%>/portfolio/M1TQ"><%=staticData.about_details%></a>
+
                             </div>
                         </div>
                     </li>
@@ -85,15 +86,14 @@
             <div class="team_block col-xl-9">
                 <ul class="row">
                     <% for (var i = 0; i < teamMember.length; i++) { %>
-
                     <li class="col-lg-4 col-sm-6">
                         <div class="team_inner">
                             <img src="/images/<%= teamMember[i].image %>" title="" alt="" />
                             <div class="info_team">
-                                <div class="team_name"><%- teamMember[i].name %></div>
+                                <div class="team_name"><%- teamMember[i].name[lang]%></div>
                                 <div class="team_description">
-                                    <%- teamMember[i].desc %>
-                                    <br />rs
+                                    <%- teamMember[i].desc[lang]%>
+                                    <br />
 
                                 </div>
                             </div>

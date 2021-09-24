@@ -11,6 +11,7 @@ exports.getAboutUS = (req, res, next) => {
                         lang: req.session.language || 'en',
                         teamMember,
                         magia: req.originalUrl.substring(3),
+
                     })
                 });
             })

@@ -12,5 +12,7 @@ exports.findContent = async (req, res) => {
         lang: req.session.language || 'en',
         magia: req.originalUrl.substring(3),
         thisBlog
+
     });
+    console.log(req.session.language)
 };

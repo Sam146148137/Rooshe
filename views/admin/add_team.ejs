@@ -12,13 +12,23 @@
                 <div class="card-body p-4">
                     <form action="/admin/add_team" method="post" enctype="multipart/form-data">
                         <div class="mb-3">
-                            <label for="title">Name</label>
-                            <input type="text" name="name" id="name" class="form-control form-control-lg"
+                            <label for="title">Name En</label>
+                            <input type="text" name="nameEn" id="nameEn" class="form-control form-control-lg"
                                    placeholder="input name" required/>
                         </div>
                         <div class="mb-3">
-                            <label for="desc">Description</label>
-                            <textarea name="desc"  value="" class="form-control form-control-lg"
+                            <label for="title">Name Am</label>
+                            <input type="text" name="nameHy" id="nameHy" class="form-control form-control-lg"
+                                   placeholder="input name" required/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="desc">Description En</label>
+                            <textarea name="descEn"  value="" class="form-control form-control-lg"
+                                      placeholder="Description" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="desc">Description Am</label>
+                            <textarea name="descHy"  value="" class="form-control form-control-lg"
                                       placeholder="Description" required></textarea>
                         </div>
                         <div class="mb-3">

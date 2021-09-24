@@ -28,8 +28,10 @@ exports.getAddTeam = (req, res) => {
 exports.postAddTeam = (req, res) => {
     console.log(req.file);
     const x = new teamModel ();
-    x.name = req.body.name;
-    x.desc = req.body.desc;
+    x.name.en = req.body.nameEn;
+    x.name.hy = req.body.nameHy;
+    x.desc.en = req.body.descEn;
+    x.desc.hy = req.body.descHy;
     x.image = req.file.filename;
     x.save((err, doc) => {
         if (!err) {
