@@ -38,8 +38,14 @@ exports.updateTeam = (req, res) => {
     teamModel.findByIdAndUpdate(
         id,
         {
-            name: req.body.name,
-            desc: req.body.desc,
+            name: {
+                en: req.body.nameEn,
+                hy: req.body.nameHy,
+            },
+            desc: {
+                en: req.body.descEn,
+                hy: req.body.descHy,
+            },
             image: new_image,
         },
         (err, result) => {

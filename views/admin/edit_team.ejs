@@ -7,19 +7,29 @@
         <div class="col-lg-6 mx-auto mt-4">
             <div class="card shadow">
                 <div class="card-header bg-success">
-                    <h3 class="text-light">Edit Member - <%= content.name %></h3>
+                    <h3 class="text-light">Edit Member - <%= content.name.en %></h3>
                 </div>
                 <div class="card-body p-4">
                     <form action="/admin/updatee/<%= content._id %>" method="post" enctype="multipart/form-data">
                         <div class="mb-3">
-                            <label for="title">Name</label>
-                            <input type="text" name="name" id="name" class="form-control form-control-lg"
-                                   placeholder="input title" value="<%= content.name %>" required/>
+                            <label for="title">Name En</label>
+                            <input type="text" name="nameEn" id="nameEn" class="form-control form-control-lg"
+                                   placeholder="input title" value="<%= content.name.en %>" required/>
                         </div>
                         <div class="mb-3">
-                            <label for="desc">Description</label>
-                            <textarea name="desc" id="desc" class="form-control form-control-lg"
-                                      placeholder="Description" value="<%= content.desc %>" required><%= content.desc %></textarea>
+                            <label for="title">Name Hy</label>
+                            <input type="text" name="nameHy" id="namehy" class="form-control form-control-lg"
+                                   placeholder="input title" value="<%= content.name.hy %>" required/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="desc">Description En</label>
+                            <textarea name="descEn" id="descEn" class="form-control form-control-lg"
+                                      placeholder="Description" value="<%= content.desc.en %>" required><%= content.desc.en %></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="desc">Description Hy</label>
+                            <textarea name="descHy" id="descHy" class="form-control form-control-lg"
+                                      placeholder="Description" value="<%= content.desc.hy %>" required><%= content.desc.hy %></textarea>
                         </div>
                         <div class="mb-3">
                             <label for="image">Select Image</label>
