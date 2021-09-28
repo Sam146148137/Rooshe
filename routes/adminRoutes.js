@@ -19,7 +19,7 @@ const uploadTeamMemberPhoto = adminAddTeamController.upload;
 
 // router.post('/signup', adminController.signupPost);
 
-router.get('/admin/home', adminAddTeamController.getHome);
+router.get('/admin/home', authMiddleware.requireAuth, adminAddTeamController.getHome);
 
 router.get('/admin', adminController.loginGet);
 
