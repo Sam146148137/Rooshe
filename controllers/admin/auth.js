@@ -39,9 +39,9 @@ const createToken = (id) => {
     })
 }
 
-// exports.signupGet = (req, res) => {
-//     res.render('admin/signup')
-// };
+exports.signupGet = (req, res) => {
+    res.render('admin/signup')
+};
 
 exports.loginGet = (req, res) => {
     res.render('admin/login')
@@ -66,19 +66,19 @@ exports.loginGet = (req, res) => {
 // }
 
 // admin registracia original tarberak
-// exports.signupPost = async (req, res) => {
-//     const {name, password} = req.body;
-//     try {
-//         const admin = await Admin.create({name, password});
-//         const token = createToken(admin._id)
-//         res.cookie('jwt', token, {httpOnly: true, maxAge: maxAge * 1000 });
-//         res.status(201).json({admin: admin._id})
-//     }
-//     catch (err) {
-//         const errors = handleErrors(err);
-//         res.status(400).json({errors});
-//     }
-// }
+exports.signupPost = async (req, res) => {
+    const {name, password} = req.body;
+    try {
+        const admin = await Admin.create({name, password});
+        const token = createToken(admin._id)
+        res.cookie('jwt', token, {httpOnly: true, maxAge: maxAge * 1000 });
+        res.status(201).json({admin: admin._id})
+    }
+    catch (err) {
+        const errors = handleErrors(err);
+        res.status(400).json({errors});
+    }
+}
 
 exports.loginPost = async (req, res) => {
     const {name, password} = req.body;
