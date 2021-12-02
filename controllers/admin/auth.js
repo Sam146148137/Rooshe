@@ -39,46 +39,46 @@ const createToken = (id) => {
     })
 }
 
-// exports.signupGet = (req, res) => {
-//     res.render('admin/signup')
-// };
+exports.signupGet = (req, res) => {
+    res.render('admin/signup')
+};
 
 exports.loginGet = (req, res) => {
     res.render('admin/login')
 };
 
-// admin registracia
-// exports.signupPost = async (req, res) => {
-//
-//     console.log(req.body)
-//     const admin = new Admin();
-//     admin.name = req.body.name;
-//     admin.password = req.body.password;
-//     await admin.save( (err) => {
-//         if(!err) {
-//             console.log('saved successful')
-//
-//         }else {
-//             console.log(err);
-//         }
-//     })jwt
-//     res.json("some text")
-// }
+admin registracia
+exports.signupPost = async (req, res) => {
 
-// admin registracia original tarberak
-// exports.signupPost = async (req, res) => {
-//     const {name, password} = req.body;
-//     try {
-//         const admin = await Admin.create({name, password});
-//         const token = createToken(admin._id)
-//         res.cookie('jwt', token, {httpOnly: true, maxAge: maxAge * 1000 });
-//         res.status(201).json({admin: admin._id})
-//     }
-//     catch (err) {
-//         const errors = handleErrors(err);
-//         res.status(400).json({errors});
-//     }
-// }
+    console.log(req.body)
+    const admin = new Admin();
+    admin.name = req.body.name;
+    admin.password = req.body.password;
+    await admin.save( (err) => {
+        if(!err) {
+            console.log('saved successful')
+
+        }else {
+            console.log(err);
+        }
+    })jwt
+    res.json("some text")
+}
+
+admin registracia original tarberak
+exports.signupPost = async (req, res) => {
+    const {name, password} = req.body;
+    try {
+        const admin = await Admin.create({name, password});
+        const token = createToken(admin._id)
+        res.cookie('jwt', token, {httpOnly: true, maxAge: maxAge * 1000 });
+        res.status(201).json({admin: admin._id})
+    }
+    catch (err) {
+        const errors = handleErrors(err);
+        res.status(400).json({errors});
+    }
+}
 
 exports.loginPost = async (req, res) => {
     const {name, password} = req.body;
